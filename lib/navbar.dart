@@ -1,4 +1,5 @@
 import 'package:ayu_hub/features/ui/forum/forum.dart';
+import 'package:ayu_hub/features/ui/home/home.dart';
 import 'package:ayu_hub/features/ui/shop/shop.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,7 @@ class _NavbarState extends State<Navbar> {
   int selectedindex = 0;
 
   List pages = [
-    const Scaffold(
-      backgroundColor: Colors.red,
-    ),
+    const HomeScreen(),
     const ShoppingScreen(),
     const ForumScreen(),
     const Scaffold(
