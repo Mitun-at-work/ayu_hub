@@ -2,8 +2,8 @@ import 'package:ayu_hub/features/constants/contants.dart';
 import 'package:ayu_hub/features/ui/shop/title_tile.dart';
 import 'package:flutter/material.dart';
 
-class ForumExplore extends StatelessWidget {
-  const ForumExplore({
+class ShopExplore extends StatelessWidget {
+  const ShopExplore({
     super.key,
   });
 

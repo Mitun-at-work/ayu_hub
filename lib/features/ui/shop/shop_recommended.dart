@@ -1,11 +1,12 @@
 import 'package:ayu_hub/features/constants/contants.dart';
+import 'package:ayu_hub/features/ui/review/reviewpage.dart';
 import 'package:ayu_hub/features/ui/shop/book_component.dart';
 import 'package:ayu_hub/features/ui/shop/title_tile.dart';
 
 import 'package:flutter/material.dart';
 
-class ForumBookCarousel extends StatelessWidget {
-  const ForumBookCarousel({
+class ShoppBookCarousel extends StatelessWidget {
+  const ShoppBookCarousel({
     super.key,
     required this.title,
   });
@@ -28,8 +29,17 @@ class ForumBookCarousel extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: bookModels.length,
             itemBuilder: (context, index) {
-              return BookComponent(
-                bookModel: bookModels[index],
+              return GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => const Reviewpage(),
+                    ),
+                  );
+                },
+                child: BookComponent(
+                  bookModel: bookModels[index],
+                ),
               );
             },
           ),

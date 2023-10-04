@@ -1,11 +1,11 @@
-import 'package:ayu_hub/features/ui/shop/forum_explore.dart';
-import 'package:ayu_hub/features/ui/shop/forum_query.dart';
-import 'package:ayu_hub/features/ui/shop/forum_recommended.dart';
+import 'package:ayu_hub/features/ui/shop/shop_explore.dart';
+import 'package:ayu_hub/features/ui/shop/shop_query.dart';
+import 'package:ayu_hub/features/ui/shop/shop_recommended.dart';
 import 'package:ayu_hub/features/ui/shop/shop_topbar.dart';
 import 'package:flutter/material.dart';
 
-class ForumScreen extends StatelessWidget {
-  const ForumScreen({super.key});
+class ShoppingScreen extends StatelessWidget {
+  const ShoppingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +16,11 @@ class ForumScreen extends StatelessWidget {
           child: Column(
             children: [
               ShopTopBar(),
-              ForumQueryBox(),
-              ForumExplore(),
-              ForumBookCarousel(title: "Recommended eBooks"),
-              ForumBookCarousel(title: "Popular eBooks"),
-              ForumBookCarousel(title: "Top Picks eBooks"),
+              ShopQueryBox(),
+              ShopExplore(),
+              ShoppBookCarousel(title: "Recommended eBooks"),
+              ShoppBookCarousel(title: "Popular eBooks"),
+              ShoppBookCarousel(title: "Top Picks eBooks"),
             ],
           ),
         ),

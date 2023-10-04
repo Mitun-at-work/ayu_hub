@@ -1,4 +1,4 @@
-import 'package:ayu_hub/features/ui/forum/fourumcomments.dart';
+import 'package:ayu_hub/features/ui/forum/forumcomments.dart';
 import 'package:flutter/material.dart';
 
 class ChatWidget extends StatefulWidget {

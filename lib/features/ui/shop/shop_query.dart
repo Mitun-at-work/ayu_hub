@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ForumQueryBox extends StatelessWidget {
-  const ForumQueryBox({
+class ShopQueryBox extends StatelessWidget {
+  const ShopQueryBox({
     super.key,
   });
 
