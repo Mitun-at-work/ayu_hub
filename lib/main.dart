@@ -1,9 +1,11 @@
-import 'package:ayu_hub/features/ui/home/home.dart';
+import 'package:ayu_hub/features/functions/build_theme.dart';
+import 'package:ayu_hub/features/ui/shop/shop.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
       MaterialApp(
-        theme: ThemeData(fontFamily: 'Poppins'),
-        home: const HomeScreen(),
+        debugShowCheckedModeBanner: false,
+        theme: buildThemeApp(),
+        home: const ForumScreen(),
       ),
     );
