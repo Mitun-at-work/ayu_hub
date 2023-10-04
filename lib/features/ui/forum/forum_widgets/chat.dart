@@ -33,8 +33,11 @@ class _ChatWidgetState extends State<ChatWidget> {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const ForumComment()));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const ForumComment(),
+                ),
+              );
             },
             child: Text(
               widget.inputText,
