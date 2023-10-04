@@ -1,7 +1,6 @@
 List chats = [
   {
-    "profileUrl":
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+    "profileUrl": "assets/images/person(1).jpeg",
     "profileName": "Andrew",
     "likes": "300",
     "shares": "100",
@@ -9,8 +8,7 @@ List chats = [
     "text": "how do I make best use of moneycontrol for interpreting stocks? ",
   },
   {
-    "profileUrl":
-        "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2018-09/shutterstock_648907024.jpg?itok=7lrLYx-B",
+    "profileUrl": "assets/images/person(2).jpeg",
     "profileName": "The Bird",
     "likes": "200",
     "shares": "189",
@@ -18,8 +16,7 @@ List chats = [
     "text": "What's the most creative thing you saw on the internet today?",
   },
   {
-    "profileUrl":
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/800px-Pierre-Person.jpg",
+    "profileUrl": "assets/images/person(3).jpeg",
     "profileName": "Michael Coargue",
     "likes": "139",
     "shares": "29",

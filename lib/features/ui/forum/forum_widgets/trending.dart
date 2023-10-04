@@ -53,8 +53,11 @@ class ForumTrending extends StatelessWidget {
             const SizedBox(height: 5),
             Row(
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 15,
+                  backgroundImage: AssetImage(
+                    chats[0]["profileUrl"],
+                  ),
                 ),
                 const SizedBox(width: 10),
                 Text(

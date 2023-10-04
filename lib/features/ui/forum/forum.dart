@@ -15,6 +15,14 @@ class _ForumScreenState extends State<ForumScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.deepPurple,
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+          size: 30,
+        ),
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -28,13 +36,13 @@ class _ForumScreenState extends State<ForumScreen> {
                 decoration: const BoxDecoration(
                   color: Colors.deepPurple,
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.all(15.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
                   child: Column(
                     children: [
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             "Top Picks for you",
                             style: TextStyle(
                               color: Colors.white,
@@ -42,16 +50,15 @@ class _ForumScreenState extends State<ForumScreen> {
                               fontSize: 20,
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           CircleAvatar(
                             backgroundColor: Colors.white,
-                            // backgroundImage: NetworkImage(
-                            //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2BRVTOSPX6Kh_LLMNt0Fwa-V0NUI9XIVnw&usqp=CAU"),
+                            backgroundImage: AssetImage(chats[2]["profileUrl"]),
                           ),
                         ],
                       ),
-                      SizedBox(height: 15),
-                      CarouselWidget(),
+                      const SizedBox(height: 15),
+                      const CarouselWidget(),
                     ],
                   ),
                 ),

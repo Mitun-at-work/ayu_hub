@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/forum/fourumcomments.dart';
 import 'package:flutter/material.dart';
 
 class ChatWidget extends StatefulWidget {
@@ -30,19 +31,25 @@ class _ChatWidgetState extends State<ChatWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
-            widget.inputText,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Colors.black,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const ForumComment()));
+            },
+            child: Text(
+              widget.inputText,
+              style: const TextStyle(
+                fontSize: 18,
+                color: Colors.black,
+              ),
             ),
           ),
           const SizedBox(height: 10),
           Row(
             children: [
-              const CircleAvatar(
+              CircleAvatar(
                 radius: 18,
-                // backgroundImage: NetworkImage(widget.imgUrl),
+                backgroundImage: AssetImage(widget.imgUrl),
               ),
               const SizedBox(width: 10),
               Text(

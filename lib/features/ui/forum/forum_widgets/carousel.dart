@@ -25,7 +25,7 @@ class _CarouselWidgetState extends State<CarouselWidget> {
         CarouselSlider(
           options: CarouselOptions(
             enableInfiniteScroll: true,
-            autoPlay: true,
+            autoPlay: false,
             autoPlayCurve: Curves.linear,
             autoPlayAnimationDuration: const Duration(milliseconds: 800),
             autoPlayInterval: const Duration(seconds: 2),
