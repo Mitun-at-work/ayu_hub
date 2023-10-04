@@ -6,7 +6,5 @@ void main() => runApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Poppins'),
         home: const HomeScreen(),
-        debugShowCheckedModeBanner: false,
-        home: const ForumScreen(),
       ),
     );
