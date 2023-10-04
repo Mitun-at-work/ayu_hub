@@ -3,18 +3,23 @@ import 'package:flutter/material.dart';
 class BookPriceInfo extends StatelessWidget {
   const BookPriceInfo({
     super.key,
+    required this.bookPrice,
+    required this.bookRating,
   });
+
+  final double bookPrice;
+  final double bookRating;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text("\$20"),
+        Text("\$$bookPrice"),
         Row(
           children: [
-            Text("4.9"),
-            Padding(
+            Text(bookRating.toString()),
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 5),
               child: Icon(
                 Icons.star,
