@@ -5,5 +5,6 @@ void main() => runApp(
       MaterialApp(
         theme: ThemeData(fontFamily: 'Poppins'),
         home: const HomeScreen(),
+        debugShowCheckedModeBanner: false,
       ),
     );
