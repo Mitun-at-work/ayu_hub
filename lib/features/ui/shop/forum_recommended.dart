@@ -26,7 +26,7 @@ class ForumBookCarousel extends StatelessWidget {
           child: ListView.builder(
             physics: const BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount: bookModels.length,
             itemBuilder: (context, index) {
               return BookComponent(
                 bookModel: bookModels[index],

@@ -12,24 +12,24 @@ class BookPriceInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text("\$$bookPrice"),
-        Row(
-          children: [
-            Text(bookRating.toString()),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5),
-              child: Icon(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 2),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text("\$$bookPrice"),
+          Row(
+            children: [
+              Text(bookRating.toString()),
+              const Icon(
                 Icons.star,
                 color: Colors.amber,
                 size: 18,
               ),
-            ),
-          ],
-        )
-      ],
+            ],
+          )
+        ],
+      ),
     );
   }
 }

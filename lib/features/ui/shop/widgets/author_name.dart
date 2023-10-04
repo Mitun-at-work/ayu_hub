@@ -11,7 +11,7 @@ class BookAuthorName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 5),
+      padding: const EdgeInsets.only(bottom: 5, left: 2),
       child: Text(
         maxLines: 1,
         overflow: TextOverflow.ellipsis,

@@ -11,7 +11,7 @@ class BookName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 5, bottom: 2),
+      padding: const EdgeInsets.only(top: 5, bottom: 2, left: 2),
       child: Text(
         bookName,
         maxLines: 1,

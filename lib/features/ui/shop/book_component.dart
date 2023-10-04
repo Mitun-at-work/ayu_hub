@@ -18,7 +18,17 @@ class BookComponent extends StatelessWidget {
     return Container(
       width: 150,
       margin: const EdgeInsets.all(10),
-      color: Colors.white,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(.1),
+            spreadRadius: .1,
+            blurRadius: 12,
+            offset: const Offset(1, 2),
+          )
+        ],
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

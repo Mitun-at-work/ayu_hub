@@ -18,6 +18,7 @@ class BookCover extends StatelessWidget {
         color: Colors.red.withOpacity(.1),
         image: DecorationImage(
           image: CachedNetworkImageProvider(bookCoverImage),
+          fit: BoxFit.cover,
         ),
       ),
     );

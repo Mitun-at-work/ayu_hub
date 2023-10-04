@@ -42,8 +42,8 @@ final List<BookModel> bookModels = [
   BookModel(
     bookCoverImage:
         "https://m.media-amazon.com/images/I/511PUGsLpUL.SY445_SX342.jpg",
-    bookName: 'Adam Edwards',
-    bookAuthorName: 'Ayurveda',
+    bookAuthorName: 'Adam Edwards',
+    bookName: 'Ayurveda',
     bookPrice: 50,
     bookRating: 4.7,
   ),
