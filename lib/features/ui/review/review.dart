@@ -1,3 +1,6 @@
+import 'package:ayu_hub/features/ui/review/review_widgets/staffreview.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/studentreview.dart';
+
 import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget {
@@ -6,7 +9,14 @@ class Review extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.pink,
-    );
+        body: Column(
+      children: [
+        StaffReview(),
+        Divider(
+          thickness: 1,
+        ),
+        StudentReview(),
+      ],
+    ));
   }
 }
