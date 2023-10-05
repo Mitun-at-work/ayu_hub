@@ -18,9 +18,6 @@ class _NavbarState extends State<Navbar> {
     const HomeScreen(),
     const ShoppingScreen(),
     const ForumScreen(),
-    const Scaffold(
-      backgroundColor: Colors.blue,
-    ),
     const Profile(),
   ];
   @override
@@ -60,23 +57,15 @@ class _NavbarState extends State<Navbar> {
                 size: 25,
               ),
             ),
-            const BottomNavigationBarItem(
-              label: 'My Books',
-              icon: Icon(
-                Icons.book_outlined,
-                size: 25,
-              ),
-            ),
             BottomNavigationBarItem(
               label: '',
               icon: Container(
-                height: 35,
-                width: 35,
+                height: 40,
+                width: 40,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: NetworkImage(
-                        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/800px-Pierre-Person.jpg'),
+                    image: AssetImage("assets/images/person(1).jpeg"),
                     fit: BoxFit.cover,
                   ),
                 ),

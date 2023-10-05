@@ -1,5 +1,5 @@
 import 'package:ayu_hub/features/ui/forum/forum_widgets/carousel.dart';
-
+import 'package:ayu_hub/features/ui/home/view/categories.dart';
 import 'package:flutter/material.dart';
 
 class ForumScreen extends StatefulWidget {
@@ -20,25 +20,28 @@ class _ForumScreenState extends State<ForumScreen> {
           Icons.add,
         ),
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 // color: Colors.whi,
-                height: 300,
+                height: 250,
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Top Picks for you",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 20,
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        "Top Picks for you",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                     SizedBox(height: 15),
@@ -46,63 +49,69 @@ class _ForumScreenState extends State<ForumScreen> {
                   ],
                 ),
               ),
-              // Padding(
-              //   padding: const EdgeInsets.all(15.0),
-              //   child: Column(
-              //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     mainAxisAlignment: MainAxisAlignment.start,
-              //     children: [
-              //       Row(
-              //         children: [
-              //           const Text(
-              //             "Spaces",
-              //             style: TextStyle(
-              //               color: Colors.black,
-              //               fontSize: 20,
-              //               fontWeight: FontWeight.w600,
-              //             ),
-              //           ),
-              //           const Spacer(),
-              //           InkWell(
-              //             onTap: () {},
-              //             child: const Icon(
-              //               Icons.arrow_forward,
-              //               size: 25,
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //       const SizedBox(
-              //         height: 100,
-              //         width: 400,
-              //         child: CircleList(),
-              //       ),
-              //       const Text(
-              //         "The Internet",
-              //         style: TextStyle(
-              //             color: Colors.deepPurple,
-              //             fontSize: 25,
-              //             fontWeight: FontWeight.w800),
-              //       ),
-              //       ListView.builder(
-              //         physics: const BouncingScrollPhysics(),
-              //         itemCount: chats.length,
-              //         shrinkWrap: true,
-              //         scrollDirection: Axis.vertical,
-              //         itemBuilder: (context, index) {
-              //           return ChatWidget(
-              //             inputText: chats[index]["text"],
-              //             name: chats[index]["profileName"],
-              //             shares: chats[index]["shares"],
-              //             comments: chats[index]["comments"],
-              //             likes: chats[index]["likes"],
-              //             imgUrl: chats[index]["profileUrl"],
-              //           );
-              //         },
-              //       ),
-              //     ],
-              //   ),
-              // ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        const Text(
+                          "Spaces",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const Spacer(),
+                        InkWell(
+                          onTap: () {},
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            size: 25,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 100,
+                    width: 400,
+                    child: Categories(),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      "The Internet",
+                      style: TextStyle(
+                          color: Colors.deepPurple,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w800),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: chats.length,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      itemBuilder: (context, index) {
+                        return ChatWidget(
+                          inputText: chats[index]["text"],
+                          name: chats[index]["profileName"],
+                          shares: chats[index]["shares"],
+                          comments: chats[index]["comments"],
+                          likes: chats[index]["likes"],
+                          imgUrl: chats[index]["profileUrl"],
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

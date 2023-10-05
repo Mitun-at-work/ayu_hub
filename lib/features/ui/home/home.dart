@@ -1,7 +1,7 @@
-import 'package:ayu_hub/view/categories.dart';
-import 'package:ayu_hub/view/nameand%20notification.dart';
-import 'package:ayu_hub/view/trending.dart';
-import 'package:ayu_hub/view/trending_post_builder.dart';
+import 'package:ayu_hub/features/ui/home/view/categories.dart';
+import 'package:ayu_hub/features/ui/home/view/nameand%20notification.dart';
+import 'package:ayu_hub/features/ui/home/view/trending.dart';
+import 'package:ayu_hub/features/ui/home/view/trending_post_builder.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:flutter/material.dart';

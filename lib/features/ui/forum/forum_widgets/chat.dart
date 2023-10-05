@@ -42,12 +42,12 @@ class _ChatWidgetState extends State<ChatWidget> {
             child: Text(
               widget.inputText,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 color: Colors.black,
               ),
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           Row(
             children: [
               CircleAvatar(
@@ -105,7 +105,7 @@ class _ChatWidgetState extends State<ChatWidget> {
               ),
               const SizedBox(width: 10),
             ],
-          )
+          ),
         ],
       ),
     );

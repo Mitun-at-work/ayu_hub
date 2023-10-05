@@ -17,59 +17,56 @@ class _ReviewpageState extends State<Reviewpage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      child: Scaffold(
-        body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const BookDetails(),
-              const SizedBox(height: 10),
-              SizedBox(
-                width: 300,
-                child: TabBar(
-                  tabs: const [
-                    Tab(
-                      child: Text(
-                        "Overview",
-                        style: TextStyle(fontSize: 13),
+      child: SafeArea(
+        child: Scaffold(
+          body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const BookDetails(),
+                const SizedBox(height: 10),
+                SizedBox(
+                  width: 300,
+                  child: TabBar(
+                    tabs: const [
+                      Tab(
+                        child: Text(
+                          "Overview",
+                          style: TextStyle(fontSize: 13),
+                        ),
                       ),
-                    ),
-                    Tab(
-                      child: Text(
-                        "Book Detail",
-                        style: TextStyle(fontSize: 12),
+                      Tab(
+                        child: Text(
+                          "Book Detail",
+                          style: TextStyle(fontSize: 12),
+                        ),
                       ),
-                    ),
-                    Tab(
-                      child: Text(
-                        "Reivew",
-                        style: TextStyle(fontSize: 13),
+                      Tab(
+                        child: Text(
+                          "Reivew",
+                          style: TextStyle(fontSize: 13),
+                        ),
                       ),
-                    ),
-                  ],
-                  labelColor: Colors.black,
-                  indicatorColor: Colors.green,
-                  indicatorSize: TabBarIndicatorSize.label,
-                  indicatorWeight: 3,
-                  unselectedLabelColor: Colors.grey.shade600,
+                    ],
+                    labelColor: Colors.black,
+                    indicatorColor: Colors.green,
+                    indicatorSize: TabBarIndicatorSize.label,
+                    indicatorWeight: 3,
+                    unselectedLabelColor: Colors.grey.shade600,
+                  ),
                 ),
-              ),
-              const Expanded(
-                child: TabBarView(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 20,
-                      ),
-                      child: OverView(),
-                    ),
-                    BkDetail(),
-                    Review(),
-                  ],
+                const SizedBox(
+                  height: 600,
+                  child: TabBarView(
+                    children: [
+                      OverView(),
+                      BkDetail(),
+                      Review(),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

@@ -22,7 +22,7 @@ class BookDetails extends StatelessWidget {
         ],
       ),
       child: const Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(15.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
