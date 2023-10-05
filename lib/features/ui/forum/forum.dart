@@ -1,7 +1,5 @@
-import 'package:ayu_hub/features/ui/forum/data/forumdata.dart';
 import 'package:ayu_hub/features/ui/forum/forum_widgets/carousel.dart';
-import 'package:ayu_hub/features/ui/forum/forum_widgets/chat.dart';
-import 'package:ayu_hub/features/ui/forum/forum_widgets/circlelist.dart';
+
 import 'package:flutter/material.dart';
 
 class ForumScreen extends StatefulWidget {
