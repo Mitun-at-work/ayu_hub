@@ -88,15 +88,14 @@ class NameAndNotification extends StatelessWidget {
         children: [
           const Text(
             'Hi, Sudharsasn',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           Center(
             child: IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.notifications_outlined),
-              iconSize: 30,
-              color: Colors.black54,
-              splashRadius: 18,
+              icon: const Icon(Icons.mail_outline_sharp),
+              color: Colors.black,
+              splashRadius: 10,
             ),
           )
         ],
