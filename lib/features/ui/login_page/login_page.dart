@@ -1,3 +1,4 @@
+import 'package:ayu_hub/navbar.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -100,6 +101,11 @@ class AppleLogin extends StatelessWidget {
         visualDensity: const VisualDensity(vertical: 3), // to expand
         onTap: () {
           // tap actions
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) => const Navbar(),
+            ),
+          );
         },
       ),
     );
@@ -118,8 +124,9 @@ class GoogleLogin extends StatelessWidget {
       // width: double.infinity,
       width: 320,
       decoration: BoxDecoration(
-          color: Colors.purple.shade900,
-          borderRadius: BorderRadius.circular(30)),
+        color: Colors.purple.shade900,
+        borderRadius: BorderRadius.circular(30),
+      ),
       child: ListTile(
         leading: const Padding(
           padding: EdgeInsets.only(bottom: 1),
@@ -141,6 +148,11 @@ class GoogleLogin extends StatelessWidget {
         visualDensity: const VisualDensity(vertical: 3), // to expand
         onTap: () {
           // tap actions
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) => const Navbar(),
+            ),
+          );
         },
       ),
     );

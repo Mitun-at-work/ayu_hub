@@ -1,4 +1,4 @@
-import 'package:ayu_hub/view/trendingpost_component.dart';
+import 'package:ayu_hub/features/ui/home/view/trendingpost_component.dart';
 import 'package:flutter/material.dart';
 
 class TrendingPostBuilder extends StatelessWidget {

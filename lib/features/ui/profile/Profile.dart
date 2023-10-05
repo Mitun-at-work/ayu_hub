@@ -7,61 +7,65 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 340, top: 20),
-            child: Icon(
-              Icons.dark_mode_outlined,
-              size: 28,
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(left: 340, top: 20),
+              child: Icon(
+                Icons.dark_mode_outlined,
+                size: 28,
+              ),
             ),
-          ),
-          Container(
-            height: 100,
-            width: 100,
-            decoration: BoxDecoration(
+            Container(
+              height: 100,
+              width: 100,
+              decoration: BoxDecoration(
                 color: Colors.black,
                 borderRadius: BorderRadius.circular(60),
                 image: const DecorationImage(
-                    image: AssetImage('assets/images/person(1).jpeg'))),
-            child: Stack(
-              alignment: const Alignment(0.9, 1),
-              children: [
-                Container(
-                    height: 25,
-                    width: 25,
-                    decoration: BoxDecoration(
-                      color: Colors.yellow,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Icon(
-                      Icons.edit,
-                      size: 20,
-                    )),
-              ],
+                  image: AssetImage('assets/images/person(1).jpeg'),
+                ),
+              ),
+              child: Stack(
+                alignment: const Alignment(0.9, 1),
+                children: [
+                  Container(
+                      height: 25,
+                      width: 25,
+                      decoration: BoxDecoration(
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Icon(
+                        Icons.edit,
+                        size: 20,
+                      )),
+                ],
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Text(
-            'Nicolas Adams',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          const Text(
-            'nicolasadams@gmail.com',
-            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Privacy(),
-          const PurchasedHistory(),
-          const MyLibrary(),
-          const HelpAndSupport(),
-          const Setting(),
-          const Logout(),
-        ],
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              'Nicolas Adams',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const Text(
+              'nicolasadams@gmail.com',
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Privacy(),
+            const PurchasedHistory(),
+            const MyLibrary(),
+            const HelpAndSupport(),
+            const Setting(),
+            const Logout(),
+          ],
+        ),
       )),
     );
   }

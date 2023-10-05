@@ -8,11 +8,11 @@ class CircleList extends StatefulWidget {
 }
 
 class _CircleListState extends State<CircleList> {
-  final List myItems = [
-    "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+  final List<String> myItems = [
+    "assets/images/ayurveda.png",
+    "assets/images/homeopathy.png",
+    "assets/images/ayurveda.png",
+    "assets/images/homeopathy.png",
   ];
   @override
   Widget build(BuildContext context) {
@@ -24,11 +24,12 @@ class _CircleListState extends State<CircleList> {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
+            padding: const EdgeInsets.all(20),
             height: 80,
             width: 80,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.blue,
+              color: Colors.white,
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.shade500,
@@ -36,12 +37,11 @@ class _CircleListState extends State<CircleList> {
                   spreadRadius: 2,
                 ),
               ],
-              // image: DecorationImage(
-              //   image: NetworkImage(
-              //     myItems[index],
-              //   ),
-              //   fit: BoxFit.cover,
-              // ),
+            ),
+            child: Image(
+              image: AssetImage(
+                myItems[index],
+              ),
             ),
           ),
         );

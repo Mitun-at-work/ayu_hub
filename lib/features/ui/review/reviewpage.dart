@@ -2,7 +2,6 @@ import 'package:ayu_hub/features/ui/review/bookdetail.dart';
 import 'package:ayu_hub/features/ui/review/overview.dart';
 import 'package:ayu_hub/features/ui/review/review.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/review_bookinfo.dart';
-import 'package:ayu_hub/features/ui/shop/shop_recommended.dart';
 
 import 'package:flutter/material.dart';
 
@@ -18,9 +17,9 @@ class _ReviewpageState extends State<Reviewpage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      child: Scaffold(
-        body: SingleChildScrollView(
-          child: SafeArea(
+      child: SafeArea(
+        child: Scaffold(
+          body: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
