@@ -1,6 +1,4 @@
 import 'package:ayu_hub/features/ui/admin/admin_widgets/continuebutton.dart';
-import 'package:ayu_hub/features/ui/review/review_widgets/stardisplay.dart';
-import 'package:ayu_hub/features/ui/review/review_widgets/tags.dart';
 import 'package:flutter/material.dart';
 
 class LastReadInfo extends StatelessWidget {
