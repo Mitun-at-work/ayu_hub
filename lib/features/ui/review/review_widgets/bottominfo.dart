@@ -3,14 +3,21 @@ import 'package:ayu_hub/features/ui/review/review_widgets/ratings.dart';
 import 'package:flutter/material.dart';
 
 class BottomInfo extends StatelessWidget {
-  const BottomInfo({super.key});
+  final double rating;
+  const BottomInfo({
+    super.key,
+    required this.rating,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Ratings(title: "Rating", value: "4.9"),
+        Ratings(
+          title: "Rating",
+          value: rating.toString(),
+        ),
         const Downloaded(title: "Downloaded", value: "890 Users"),
         Container(
           padding: const EdgeInsets.all(15),

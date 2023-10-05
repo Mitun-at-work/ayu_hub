@@ -3,7 +3,15 @@ import 'package:ayu_hub/features/ui/review/review_widgets/tags.dart';
 import 'package:flutter/material.dart';
 
 class BookInfo extends StatelessWidget {
-  const BookInfo({super.key});
+  final String bookName;
+  final String authorName;
+  final double rating;
+  const BookInfo({
+    super.key,
+    required this.bookName,
+    required this.authorName,
+    required this.rating,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +20,17 @@ class BookInfo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            "Ayurveda for Beginners 2021",
-            style: TextStyle(
+          Text(
+            bookName,
+            style: const TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w800,
             ),
           ),
           const SizedBox(height: 10),
-          const Text(
-            "Author By: Colone LV",
-            style: TextStyle(
+          Text(
+            authorName,
+            style: const TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w600,
               color: Colors.grey,
@@ -37,7 +45,7 @@ class BookInfo extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 5),
-          const Stars(value: 4),
+          Stars(value: rating),
           const SizedBox(height: 20),
           Text(
             "Following Tags",

@@ -33,7 +33,9 @@ class ShoppBookCarousel extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (BuildContext context) => const Reviewpage(),
+                      builder: (BuildContext context) => Reviewpage(
+                        bookModel: bookModels[index],
+                      ),
                     ),
                   );
                 },

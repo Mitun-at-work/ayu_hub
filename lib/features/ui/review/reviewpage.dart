@@ -2,11 +2,13 @@ import 'package:ayu_hub/features/ui/review/bookdetail.dart';
 import 'package:ayu_hub/features/ui/review/overview.dart';
 import 'package:ayu_hub/features/ui/review/review.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/review_bookinfo.dart';
+import 'package:ayu_hub/features/ui/shop/model/book_model.dart';
 
 import 'package:flutter/material.dart';
 
 class Reviewpage extends StatefulWidget {
-  const Reviewpage({super.key});
+  final BookModel bookModel;
+  const Reviewpage({super.key, required this.bookModel});
 
   @override
   State<Reviewpage> createState() => _ReviewpageState();
@@ -23,7 +25,7 @@ class _ReviewpageState extends State<Reviewpage> with TickerProviderStateMixin {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const BookDetails(),
+                 BookDetails(bookModel: widget.bookModel,),
                 const SizedBox(height: 10),
                 SizedBox(
                   width: 300,
