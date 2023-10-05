@@ -25,12 +25,10 @@ class _CarouselWidgetState extends State<CarouselWidget> {
         CarouselSlider(
           options: CarouselOptions(
             enableInfiniteScroll: true,
-            autoPlay: false,
-            autoPlayCurve: Curves.linear,
+            autoPlay: true,
             autoPlayAnimationDuration: const Duration(milliseconds: 800),
-            autoPlayInterval: const Duration(seconds: 2),
-            enlargeCenterPage: false,
-            aspectRatio: 2.0,
+            autoPlayInterval: const Duration(seconds: 7),
+            aspectRatio: 16 / 6.5,
             onPageChanged: (index, reason) {
               setState(
                 () {
@@ -41,14 +39,14 @@ class _CarouselWidgetState extends State<CarouselWidget> {
           ),
           items: myitems,
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 20),
         AnimatedSmoothIndicator(
           activeIndex: myCurrentIndex,
           count: myitems.length,
           effect: WormEffect(
-            dotHeight: 8,
-            dotWidth: 8,
-            spacing: 10,
+            dotHeight: 4,
+            dotWidth: 4,
+            spacing: 5,
             dotColor: Colors.grey.shade200,
             activeDotColor: Colors.grey.shade900,
             paintStyle: PaintingStyle.fill,

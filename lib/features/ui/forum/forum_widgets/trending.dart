@@ -7,17 +7,12 @@ class ForumTrending extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10),
-      // height: 200,
-      width: 600,
+      width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
         color: Colors.white,
       ),
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,35 +21,30 @@ class ForumTrending extends StatelessWidget {
               chats[0]["text"],
               style: const TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 20,
               ),
             ),
-            const SizedBox(height: 5),
-            Row(
+            const SizedBox(height: 10),
+            const Row(
               children: [
                 Text(
                   "Answer ",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w200,
-                    fontSize: 15,
-                    color: Colors.grey.shade600,
-                  ),
+                  style: TextStyle(color: Colors.grey, fontSize: 12),
                 ),
-                const Text(
+                SizedBox(width: 10),
+                Text(
                   ". The Internet",
                   style: TextStyle(
                     fontWeight: FontWeight.w100,
-                    fontSize: 18,
                     color: Colors.black,
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 15),
             Row(
               children: [
                 CircleAvatar(
-                  radius: 15,
+                  radius: 18,
                   backgroundImage: AssetImage(
                     chats[0]["profileUrl"],
                   ),
@@ -62,15 +52,15 @@ class ForumTrending extends StatelessWidget {
                 const SizedBox(width: 10),
                 Text(
                   chats[0]["profileName"],
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.grey.shade600,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
                   ),
                 ),
                 const Spacer(),
                 Container(
                   alignment: Alignment.center,
-                  height: 35,
+                  height: 25,
                   width: 80,
                   decoration: BoxDecoration(
                     color: Colors.red.shade800,

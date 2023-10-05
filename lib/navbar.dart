@@ -1,5 +1,6 @@
 import 'package:ayu_hub/features/ui/forum/forum.dart';
 import 'package:ayu_hub/features/ui/home/home.dart';
+import 'package:ayu_hub/features/ui/profile/Profile.dart';
 import 'package:ayu_hub/features/ui/shop/shop.dart';
 import 'package:flutter/material.dart';
 
@@ -20,9 +21,7 @@ class _NavbarState extends State<Navbar> {
     const Scaffold(
       backgroundColor: Colors.blue,
     ),
-    const Scaffold(
-      backgroundColor: Colors.amber,
-    ),
+    const Profile(),
   ];
   @override
   Widget build(BuildContext context) {
