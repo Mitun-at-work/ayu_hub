@@ -1,6 +1,6 @@
 import 'package:ayu_hub/features/ui/forum/forum.dart';
 import 'package:ayu_hub/features/ui/home/home.dart';
-import 'package:ayu_hub/features/ui/profile/Profile.dart';
+import 'package:ayu_hub/features/ui/profile/profile.dart';
 import 'package:ayu_hub/features/ui/shop/shop.dart';
 import 'package:flutter/material.dart';
 
