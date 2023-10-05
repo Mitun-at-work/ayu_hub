@@ -3,8 +3,20 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final List gradientcolors = [
+    const Color.fromARGB(255, 255, 171, 145),
+    const Color.fromARGB(255, 255, 138, 101),
+    const Color.fromARGB(255, 255, 87, 34),
+    const Color.fromARGB(255, 255, 87, 34),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -220,8 +232,20 @@ class Trending extends StatelessWidget {
     return Container(
       height: 200,
       decoration: const BoxDecoration(
-          color: Colors.redAccent,
-          borderRadius: BorderRadius.all(Radius.circular(20))),
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromARGB(255, 255, 171, 145),
+              Color.fromARGB(255, 255, 138, 101),
+              Color.fromARGB(255, 255, 87, 34),
+              Color.fromARGB(255, 255, 87, 34),
+            ],
+          )),
+      // decoration: const BoxDecoration(
+      //     color: Colors.redAccent,
+      //     borderRadius: BorderRadius.all(Radius.circular(20))),
     );
   }
 }
