@@ -16,7 +16,9 @@ class SignUp extends StatelessWidget {
                 height: 20,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
                 icon: const Icon(Icons.arrow_back),
                 color: Colors.black54,
               ),

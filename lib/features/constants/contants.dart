@@ -8,6 +8,13 @@ final List<Color> tileIconColors = [
   Colors.blue
 ];
 
+final List<String> categoryName = [
+  "Ayurvedha",
+  "siddha",
+  "Homeopathy",
+  "Unani"
+];
+
 final List<String> tileHeadings = [
   "Trending",
   "Recommended",
@@ -20,6 +27,13 @@ final List<IconData> tileIcons = [
   Icons.book,
   Icons.hourglass_full_rounded,
   Icons.favorite,
+];
+
+final List<String> categoriesImage = [
+  'assets/images/ayurveda.png',
+  'assets/images/homeopathy.png',
+  'assets/images/ayurveda.png',
+  'assets/images/ayurveda.png',
 ];
 
 final List<BookModel> bookModels = [

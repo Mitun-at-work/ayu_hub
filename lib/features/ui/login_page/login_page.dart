@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/sign_up_page/signup.dart';
 import 'package:ayu_hub/navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -42,20 +43,26 @@ class LoginPage extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 80),
+          Padding(
+            padding: const EdgeInsets.only(left: 80),
             child: Row(
               children: [
-                Text(
+                const Text(
                   'Don\'t have an account? ',
                   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 2,
                 ),
-                Text(
-                  'Sign Up ',
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => const SignUp()));
+                  },
+                  child: const Text(
+                    'Sign Up ',
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ],
             ),

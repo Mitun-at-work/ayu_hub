@@ -14,13 +14,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List gradientcolors = [
-    const Color.fromARGB(255, 255, 171, 145),
-    const Color.fromARGB(255, 255, 138, 101),
-    const Color.fromARGB(255, 255, 87, 34),
-    const Color.fromARGB(255, 255, 87, 34),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
             options: CarouselOptions(
               height: 190,
               autoPlay: true,
-              enlargeCenterPage: true,
+              enlargeCenterPage: false,
               enableInfiniteScroll: true,
             ),
           ),
@@ -76,9 +69,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
-
-
-
-

@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/home/view/categorybook.dart';
 import 'package:flutter/material.dart';
 
 class Categories extends StatelessWidget {
@@ -20,7 +21,11 @@ class Categories extends StatelessWidget {
             child: Column(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const CategoryBooks()));
+                  },
                   icon: Image.asset(
                     'assets/images/ayurveda.png',
                   ),
