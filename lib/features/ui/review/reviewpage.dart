@@ -1,4 +1,5 @@
 import 'package:ayu_hub/features/ui/review/bookdetail.dart';
+import 'package:ayu_hub/features/ui/review/enterreview.dart';
 import 'package:ayu_hub/features/ui/review/overview.dart';
 import 'package:ayu_hub/features/ui/review/review.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/review_bookinfo.dart';
@@ -21,11 +22,27 @@ class _ReviewpageState extends State<Reviewpage> with TickerProviderStateMixin {
       length: 3,
       child: SafeArea(
         child: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: Colors.deepPurple,
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const EnterReview(),
+                ),
+              );
+            },
+            child: const Icon(
+              Icons.add,
+              size: 30,
+            ),
+          ),
           body: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 BookDetails(bookModel: widget.bookModel,),
+                BookDetails(
+                  bookModel: widget.bookModel,
+                ),
                 const SizedBox(height: 10),
                 SizedBox(
                   width: 300,
