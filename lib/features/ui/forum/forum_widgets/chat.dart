@@ -42,7 +42,7 @@ class _ChatWidgetState extends State<ChatWidget> {
             child: Text(
               widget.inputText,
               style: const TextStyle(
-                fontSize: 16,
+                fontSize: 14,
                 color: Colors.black,
               ),
             ),
@@ -65,19 +65,20 @@ class _ChatWidgetState extends State<ChatWidget> {
               const Spacer(),
               const Icon(
                 Icons.favorite_outline,
-                size: 25,
+                size: 20,
               ),
               const SizedBox(width: 10),
               Text(
                 widget.shares,
                 style: TextStyle(
                   color: Colors.grey.shade600,
+                  fontSize: 13,
                 ),
               ),
               const SizedBox(width: 10),
               const SizedBox(
-                height: 25,
-                width: 25,
+                height: 18,
+                width: 18,
                 child: Image(
                   image: AssetImage(
                     "assets/images/speech-bubble.png",
@@ -89,18 +90,20 @@ class _ChatWidgetState extends State<ChatWidget> {
                 widget.shares,
                 style: TextStyle(
                   color: Colors.grey.shade600,
+                  fontSize: 13,
                 ),
               ),
               const SizedBox(width: 10),
               const Icon(
                 Icons.share_outlined,
-                size: 25,
+                size: 18,
               ),
               const SizedBox(width: 10),
               Text(
                 widget.shares,
                 style: TextStyle(
                   color: Colors.grey.shade600,
+                  fontSize: 13,
                 ),
               ),
               const SizedBox(width: 10),

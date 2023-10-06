@@ -5,6 +5,7 @@ import 'package:ayu_hub/features/ui/home/view/trending_post_builder.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,6 +15,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final items = [
+    const Trending(),
+    const Trending(),
+    const Trending(),
+  ];
+  int currentindex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 20,
           ),
           CarouselSlider(
-            items: [1, 2, 3, 4, 5].map(
+            items: items.map(
               (e) {
                 return const Trending();
               },
@@ -36,11 +43,35 @@ class _HomeScreenState extends State<HomeScreen> {
               autoPlay: true,
               enlargeCenterPage: false,
               enableInfiniteScroll: true,
+              onPageChanged: (index, reason) {
+                setState(
+                  () {
+                    currentindex = index;
+                  },
+                );
+              },
+            ),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Center(
+            child: AnimatedSmoothIndicator(
+              activeIndex: currentindex,
+              count: items.length,
+              effect: WormEffect(
+                dotHeight: 8,
+                dotWidth: 8,
+                spacing: 5,
+                dotColor: Colors.grey.shade200,
+                activeDotColor: Colors.black87,
+                paintStyle: PaintingStyle.fill,
+              ),
             ),
           ),
           // Trending(),
           const Padding(
-            padding: EdgeInsets.only(left: 15, top: 10, right: 15),
+            padding: EdgeInsets.only(left: 15, top: 26, right: 15),
             child: Text(
               'Categories',
               style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
