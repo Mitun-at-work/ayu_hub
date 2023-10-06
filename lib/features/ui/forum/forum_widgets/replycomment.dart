@@ -36,7 +36,7 @@ class _ReplyCommentState extends State<ReplyComment> {
             Text(
               widget.selectedText,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 13,
                 color: Colors.black,
               ),
             ),
@@ -58,7 +58,7 @@ class _ReplyCommentState extends State<ReplyComment> {
                 const Spacer(),
                 const Icon(
                   Icons.favorite_outline,
-                  size: 25,
+                  size: 20,
                 ),
                 const SizedBox(width: 10),
                 Text(
@@ -69,8 +69,8 @@ class _ReplyCommentState extends State<ReplyComment> {
                 ),
                 const SizedBox(width: 10),
                 const SizedBox(
-                  height: 25,
-                  width: 25,
+                  height: 18,
+                  width: 18,
                   child: Image(
                     image: AssetImage(
                       "assets/images/speech-bubble.png",

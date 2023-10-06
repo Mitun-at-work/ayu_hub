@@ -27,15 +27,13 @@ class _ForumCommentState extends State<ForumComment> {
           icon: const Icon(
             Icons.arrow_back,
             weight: 1,
-            size: 30,
+            size: 26,
           ),
         ),
         title: const Text(
           "Replies",
           style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 25,
-          ),
+              fontWeight: FontWeight.w600, fontSize: 24, color: Colors.black87),
         ),
       ),
       body: Column(
