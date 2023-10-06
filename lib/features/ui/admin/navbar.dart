@@ -1,21 +1,21 @@
+import 'package:ayu_hub/features/ui/admin/admin_home.dart';
 import 'package:ayu_hub/features/ui/forum/forum.dart';
-import 'package:ayu_hub/features/ui/home/home.dart';
 import 'package:ayu_hub/features/ui/profile/profile.dart';
 import 'package:ayu_hub/features/ui/shop/shop.dart';
 import 'package:flutter/material.dart';
 
-class Navbar extends StatefulWidget {
-  const Navbar({super.key});
+class AdminNavbar extends StatefulWidget {
+  const AdminNavbar({super.key});
 
   @override
-  State<Navbar> createState() => _NavbarState();
+  State<AdminNavbar> createState() => _AdminNavbarState();
 }
 
-class _NavbarState extends State<Navbar> {
+class _AdminNavbarState extends State<AdminNavbar> {
   int selectedindex = 0;
 
   List pages = [
-    const HomeScreen(),
+    const AdminHome(),
     const ShoppingScreen(),
     const ForumScreen(),
     const Profile(),
@@ -65,7 +65,7 @@ class _NavbarState extends State<Navbar> {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage("assets/images/person(1).jpeg"),
+                    image: AssetImage("assets/images/person(2).jpeg"),
                     fit: BoxFit.cover,
                   ),
                 ),

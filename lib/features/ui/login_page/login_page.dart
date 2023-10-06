@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/admin/navbar.dart';
 import 'package:ayu_hub/features/ui/sign_up_page/signup.dart';
 import 'package:ayu_hub/navbar.dart';
 import 'package:flutter/material.dart';
@@ -110,7 +111,7 @@ class AppleLogin extends StatelessWidget {
           // tap actions
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (BuildContext context) => const Navbar(),
+              builder: (BuildContext context) => const AdminNavbar(),
             ),
           );
         },
