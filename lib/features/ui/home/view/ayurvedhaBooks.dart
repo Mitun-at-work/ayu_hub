@@ -1,8 +1,8 @@
-import 'package:ayu_hub/features/constants/contants.dart';
+
 import 'package:ayu_hub/features/ui/home/view/categoryrating.dart';
 
 import 'package:ayu_hub/features/ui/review/review_widgets/tags.dart';
-import 'package:ayu_hub/features/ui/shop/widgets/book_name.dart';
+
 import 'package:flutter/material.dart';
 
 class AyurvedhaBooksDetail extends StatelessWidget {

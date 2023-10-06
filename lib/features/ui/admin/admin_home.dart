@@ -1,11 +1,10 @@
 import 'package:ayu_hub/features/constants/contants.dart';
 import 'package:ayu_hub/features/ui/admin/admin_widgets/lastread.dart';
 import 'package:ayu_hub/features/ui/admin/admin_widgets/topbar.dart';
+import 'package:ayu_hub/features/ui/admin/admin_widgets/trendingcarousel.dart';
 import 'package:ayu_hub/features/ui/home/view/categories.dart';
-import 'package:ayu_hub/features/ui/home/view/trending.dart';
 import 'package:ayu_hub/features/ui/shop/shop_recommended.dart';
 import 'package:ayu_hub/features/ui/shop/title_tile.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class AdminHome extends StatefulWidget {
@@ -28,19 +27,7 @@ class _AdminHomeState extends State<AdminHome> {
               const SizedBox(
                 height: 20,
               ),
-              CarouselSlider(
-                items: [1, 2, 3, 4, 5].map(
-                  (e) {
-                    return const Trending();
-                  },
-                ).toList(),
-                options: CarouselOptions(
-                  height: 190,
-                  autoPlay: true,
-                  enlargeCenterPage: true,
-                  enableInfiniteScroll: true,
-                ),
-              ),
+              const TreendingCarousel(),
               const SizedBox(height: 10),
               const TitleTile(
                 tileTitle: "Last read",

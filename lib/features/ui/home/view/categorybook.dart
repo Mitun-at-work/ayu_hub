@@ -1,7 +1,5 @@
 import 'package:ayu_hub/features/constants/contants.dart';
-
 import 'package:ayu_hub/features/ui/home/view/ayurvedha_books_builder.dart';
-
 import 'package:ayu_hub/features/ui/shop/title_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -10,78 +8,79 @@ class CategoryBooks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
-            child: Column(
-          children: [
-            const SizedBox(
-              height: 8,
-            ),
-            Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  icon: const Icon(Icons.arrow_back),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Container(
-                    height: 50,
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    margin:
-                        const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(.1),
-                          spreadRadius: .1,
-                          blurRadius: 10,
-                          offset: const Offset(5, 8),
-                        )
-                      ],
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(5),
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 8,
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    icon: const Icon(Icons.arrow_back),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 50,
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 8),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(.1),
+                            spreadRadius: .1,
+                            blurRadius: 10,
+                            offset: const Offset(5, 8),
+                          )
+                        ],
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(5),
+                        ),
+                      ),
+                      child: const TextField(
+                        cursorWidth: 1.4,
+                        decoration: InputDecoration(
+                          suffixIcon: Icon(Icons.search),
+                          hintText: "Search Books",
+                          border: InputBorder.none,
+                        ),
+                        maxLines: 1,
                       ),
                     ),
-                    child: const TextField(
-                      cursorWidth: 1.4,
-                      decoration: InputDecoration(
-                        suffixIcon: Icon(Icons.search),
-                        hintText: "Search Books",
-                        border: InputBorder.none,
-                      ),
-                      maxLines: 1,
+                  ),
+                  IconButton(
+                    splashRadius: 20,
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.filter_alt_outlined,
+                      color: Colors.grey,
                     ),
-                  ),
-                ),
-                IconButton(
-                  splashRadius: 20,
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.filter_alt_outlined,
-                    color: Colors.grey,
-                  ),
-                )
-              ],
-            ),
-            const TitleTile(
-              tileTitle: "Category",
-              tileSuffix: "More",
-            ),
-            const CategorySearch(),
-            const TitleTile(
-              tileTitle: "Ayurvedha",
-              tileSuffix: "",
-            ),
-            const AyurvedhaBooksBuilder(),
-          ],
-        )),
+                  )
+                ],
+              ),
+              const TitleTile(
+                tileTitle: "Category",
+                tileSuffix: "More",
+              ),
+              const CategorySearch(),
+              const TitleTile(
+                tileTitle: "Ayurvedha",
+                tileSuffix: "",
+              ),
+              const AyurvedhaBooksBuilder(),
+            ],
+          ),
+        ),
       ),
     );
   }
