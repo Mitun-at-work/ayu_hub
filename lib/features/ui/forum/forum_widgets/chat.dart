@@ -31,20 +31,11 @@ class _ChatWidgetState extends State<ChatWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => const ForumComment(),
-                ),
-              );
-            },
-            child: Text(
-              widget.inputText,
-              style: const TextStyle(
-                fontSize: 14,
-                color: Colors.black,
-              ),
+          Text(
+            widget.inputText,
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.black,
             ),
           ),
           const SizedBox(height: 20),
@@ -76,22 +67,28 @@ class _ChatWidgetState extends State<ChatWidget> {
                 ),
               ),
               const SizedBox(width: 10),
-              const SizedBox(
-                height: 18,
-                width: 18,
-                child: Image(
-                  image: AssetImage(
-                    "assets/images/speech-bubble.png",
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => const ForumComment(),
+                    ),
+                  );
+                },
+                child: const SizedBox(
+                  height: 18,
+                  width: 18,
+                  child: Image(
+                    image: AssetImage(
+                      "assets/images/speech-bubble.png",
+                    ),
                   ),
                 ),
               ),
               const SizedBox(width: 10),
               Text(
                 widget.shares,
-                style: TextStyle(
-                  color: Colors.grey.shade600,
-                  fontSize: 13,
-                ),
+                style: TextStyle(color: Colors.grey.shade600, fontSize: 13),
               ),
               const SizedBox(width: 10),
               const Icon(
@@ -101,10 +98,7 @@ class _ChatWidgetState extends State<ChatWidget> {
               const SizedBox(width: 10),
               Text(
                 widget.shares,
-                style: TextStyle(
-                  color: Colors.grey.shade600,
-                  fontSize: 13,
-                ),
+                style: TextStyle(color: Colors.grey.shade600, fontSize: 13),
               ),
               const SizedBox(width: 10),
             ],

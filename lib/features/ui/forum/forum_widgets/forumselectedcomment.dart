@@ -24,7 +24,7 @@ class _ForumSelectedCommentState extends State<ForumSelectedComment> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black12,
+      color: const Color.fromARGB(31, 46, 46, 46),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 15,
@@ -37,7 +37,7 @@ class _ForumSelectedCommentState extends State<ForumSelectedComment> {
             Text(
               widget.selectedText,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 15,
                 color: Colors.black,
               ),
             ),
@@ -59,7 +59,7 @@ class _ForumSelectedCommentState extends State<ForumSelectedComment> {
                 const Spacer(),
                 const Icon(
                   Icons.favorite_outline,
-                  size: 25,
+                  size: 20,
                 ),
                 const SizedBox(width: 10),
                 Text(
@@ -70,8 +70,8 @@ class _ForumSelectedCommentState extends State<ForumSelectedComment> {
                 ),
                 const SizedBox(width: 10),
                 const SizedBox(
-                  height: 25,
-                  width: 25,
+                  height: 18,
+                  width: 18,
                   child: Image(
                     image: AssetImage(
                       "assets/images/speech-bubble.png",
