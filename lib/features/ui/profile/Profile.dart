@@ -59,10 +59,25 @@ class Profile extends StatelessWidget {
               height: 20,
             ),
             const Privacy(),
+            const SizedBox(
+              height: 15,
+            ),
             const PurchasedHistory(),
+            const SizedBox(
+              height: 15,
+            ),
             const MyLibrary(),
+            const SizedBox(
+              height: 15,
+            ),
             const HelpAndSupport(),
+            const SizedBox(
+              height: 15,
+            ),
             const Setting(),
+            const SizedBox(
+              height: 15,
+            ),
             const Logout(),
           ],
         ),
@@ -79,13 +94,20 @@ class Logout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(
+        left: 12,
+        top: 15,
+      ),
       child: Container(
-        height: 60,
-        width: double.infinity,
+        height: 50,
+        width: 340,
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 236, 236, 236),
-            borderRadius: BorderRadius.circular(40)),
+          color: const Color.fromARGB(255, 236, 236, 236),
+          borderRadius: BorderRadius.circular(40),
+          // boxShadow: const [
+          //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
+          // ]
+        ),
         child: const Padding(
           padding: EdgeInsets.all(10.0),
           child: Row(
@@ -93,26 +115,32 @@ class Logout extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.power_settings_new),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.power_settings_new,
+                    size: 18,
+                  ),
                   // Image.asset(
                   //   'assets/images/time.png',
                   //   height: 27,
                   // ),
                   SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   Text(
                     'Logout',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black54),
+                        color: Colors.black87),
                   ),
                 ],
               ),
               Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: 20,
+                size: 18,
               )
             ],
           ),
@@ -130,13 +158,20 @@ class Setting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(
+        left: 12,
+        top: 15,
+      ),
       child: Container(
-        height: 60,
-        width: double.infinity,
+        height: 50,
+        width: 340,
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 236, 236, 236),
-            borderRadius: BorderRadius.circular(40)),
+          color: const Color.fromARGB(255, 236, 236, 236),
+          borderRadius: BorderRadius.circular(40),
+          // boxShadow: const [
+          //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
+          // ]
+        ),
         child: const Padding(
           padding: EdgeInsets.all(10.0),
           child: Row(
@@ -144,26 +179,30 @@ class Setting extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.settings_outlined),
+                  SizedBox(width: 10),
+                  Icon(
+                    Icons.settings_outlined,
+                    size: 18,
+                  ),
                   // Image.asset(
                   //   'assets/images/time.png',
                   //   height: 27,
                   // ),
                   SizedBox(
-                    width: 12,
+                    width: 15,
                   ),
                   Text(
                     'Settings',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black54),
+                        color: Colors.black87),
                   ),
                 ],
               ),
               Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: 20,
+                size: 18,
               )
             ],
           ),
@@ -181,13 +220,20 @@ class HelpAndSupport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(
+        left: 12,
+        top: 15,
+      ),
       child: Container(
-        height: 60,
-        width: double.infinity,
+        height: 50,
+        width: 340,
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 236, 236, 236),
-            borderRadius: BorderRadius.circular(40)),
+          color: const Color.fromARGB(255, 236, 236, 236),
+          borderRadius: BorderRadius.circular(40),
+          // boxShadow: const [
+          //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
+          // ]
+        ),
         child: const Padding(
           padding: EdgeInsets.all(10.0),
           child: Row(
@@ -195,18 +241,18 @@ class HelpAndSupport extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.question_mark_rounded),
+                  Icon(Icons.question_mark_rounded, size: 18),
                   // Image.asset(
                   //   'assets/images/time.png',
                   //   height: 27,
                   // ),
                   SizedBox(
-                    width: 12,
+                    width: 18,
                   ),
                   Text(
                     'Help & support',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
                         color: Colors.black54),
                   ),
@@ -214,7 +260,7 @@ class HelpAndSupport extends StatelessWidget {
               ),
               Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: 20,
+                size: 18,
               )
             ],
           ),
@@ -232,13 +278,20 @@ class MyLibrary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(
+        left: 12,
+        top: 15,
+      ),
       child: Container(
-        height: 60,
-        width: double.infinity,
+        height: 50,
+        width: 340,
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 236, 236, 236),
-            borderRadius: BorderRadius.circular(40)),
+          color: const Color.fromARGB(255, 236, 236, 236),
+          borderRadius: BorderRadius.circular(40),
+          // boxShadow: const [
+          //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
+          // ]
+        ),
         child: const Padding(
           padding: EdgeInsets.all(10.0),
           child: Row(
@@ -246,7 +299,8 @@ class MyLibrary extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.book_outlined),
+                  SizedBox(width: 10),
+                  Icon(Icons.book_outlined, size: 22),
                   // Image.asset(
                   //   'assets/images/time.png',
                   //   height: 27,
@@ -257,15 +311,15 @@ class MyLibrary extends StatelessWidget {
                   Text(
                     'My Library',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black54),
+                        color: Colors.black87),
                   ),
                 ],
               ),
               Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: 20,
+                size: 18,
               )
             ],
           ),
@@ -283,13 +337,20 @@ class PurchasedHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(
+        left: 12,
+        top: 15,
+      ),
       child: Container(
-        height: 60,
-        width: double.infinity,
+        height: 50,
+        width: 340,
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 236, 236, 236),
-            borderRadius: BorderRadius.circular(40)),
+          color: const Color.fromARGB(255, 236, 236, 236),
+          borderRadius: BorderRadius.circular(40),
+          // boxShadow: const [
+          //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
+          // ]
+        ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Row(
@@ -297,25 +358,28 @@ class PurchasedHistory extends StatelessWidget {
             children: [
               Row(
                 children: [
+                  const SizedBox(
+                    width: 10,
+                  ),
                   Image.asset(
                     'assets/images/time.png',
-                    height: 27,
+                    height: 20,
                   ),
                   const SizedBox(
-                    width: 12,
+                    width: 15,
                   ),
                   const Text(
                     'Purchased History',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black54),
+                        color: Colors.black87),
                   ),
                 ],
               ),
               const Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: 20,
+                size: 18,
               )
             ],
           ),
@@ -333,13 +397,20 @@ class Privacy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(
+        left: 12,
+        top: 15,
+      ),
       child: Container(
-        height: 60,
-        width: double.infinity,
+        height: 50,
+        width: 340,
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 236, 236, 236),
-            borderRadius: BorderRadius.circular(40)),
+          color: const Color.fromARGB(255, 236, 236, 236),
+          borderRadius: BorderRadius.circular(40),
+          // boxShadow: const [
+          //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
+          // ]
+        ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Row(
@@ -347,25 +418,28 @@ class Privacy extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Image.asset(
-                    'assets/images/lock.png',
-                    height: 27,
-                  ),
                   const SizedBox(
                     width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/lock.png',
+                    height: 20,
+                  ),
+                  const SizedBox(
+                    width: 18,
                   ),
                   const Text(
                     'Privacy',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black54),
+                        color: Colors.black87),
                   ),
                 ],
               ),
               const Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: 20,
+                size: 18,
               )
             ],
           ),

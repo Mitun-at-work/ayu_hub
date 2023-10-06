@@ -83,13 +83,13 @@ class _ForumScreenState extends State<ForumScreen> {
                     width: 400,
                     child: Categories(),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "The Internet",
                       style: TextStyle(
-                          color: Colors.deepPurple,
-                          fontSize: 22,
+                          color: Colors.purple.shade900,
+                          fontSize: 20,
                           fontWeight: FontWeight.w800),
                     ),
                   ),
