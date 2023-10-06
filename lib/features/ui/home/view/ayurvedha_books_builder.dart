@@ -8,17 +8,16 @@ class AyurvedhaBooksBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 700,
-      child: ListView.builder(
-        // shrinkWrap: true,
-        itemCount: 5,
-        itemBuilder: (context, index) {
-          return AyurvedhaBooks(
-            bookModel: bookModels[index],
-          );
-        },
-      ),
+    return ListView.builder(
+      physics: const BouncingScrollPhysics(),
+      itemCount: 5,
+      shrinkWrap: true,
+      scrollDirection: Axis.vertical,
+      itemBuilder: (context, index) {
+        return AyurvedhaBooks(
+          bookModel: bookModels[index],
+        );
+      },
     );
   }
 }

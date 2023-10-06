@@ -37,7 +37,7 @@ class _AdminHomeState extends State<AdminHome> {
                 options: CarouselOptions(
                   height: 190,
                   autoPlay: true,
-                  enlargeCenterPage: true,
+                  enlargeCenterPage: false,
                   enableInfiniteScroll: true,
                 ),
               ),

@@ -2,7 +2,7 @@ import 'package:ayu_hub/features/ui/home/view/ayurvedhaBooks.dart';
 import 'package:ayu_hub/features/ui/home/view/ayurvedhabookcover.dart';
 import 'package:ayu_hub/features/ui/shop/model/book_model.dart';
 
-import 'package:ayu_hub/features/ui/shop/widgets/book_cover.dart';
+
 
 import 'package:flutter/material.dart';
 
