@@ -11,22 +11,7 @@ class Trending extends StatelessWidget {
       height: 197,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20)),
-          color: Color.fromARGB(255, 246, 246, 246)
-          // gradient: LinearGradient(
-          //   begin: Alignment.topLeft,
-          //   end: Alignment.bottomCenter,
-          //   colors: [
-          //     // Color.fromARGB(255, 255, 171, 145),
-          //     // Color.fromARGB(255, 255, 138, 101),
-          //     // Color.fromARGB(255, 255, 87, 34),
-          //     // Color.fromARGB(255, 255, 87, 34),
-              // Color.fromARGB(255, 166, 215, 255),
-              // Color.fromARGB(255, 154, 210, 255),
-              // Color.fromARGB(255, 122, 195, 255),
-              // Color.fromARGB(255, 82, 177, 255),
-          //   ],
-          // )
-          ),
+          color: Color.fromARGB(255, 246, 246, 246)),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -102,21 +87,36 @@ class Trending extends StatelessWidget {
                   child: Container(
                     height: 30,
                     width: 100,
-                    decoration: const BoxDecoration(
-                        color: Colors.white60,
-                        borderRadius: BorderRadius.all(Radius.circular(30)),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 4,
-                              spreadRadius: 2,
-                              offset: Offset(0, 1))
-                        ]),
+                    decoration: BoxDecoration(
+                      color: Colors.purple.shade300,
+                      borderRadius: const BorderRadius.all(Radius.circular(30)),
+                      // gradient: LinearGradient(
+                      //   begin: Alignment.topLeft,
+                      //   end: Alignment.bottomCenter,
+                      //   colors: [
+
+                      //     // Color.fromARGB(255, 255, 66, 66),
+                      //     // Color.fromARGB(255, 250, 40, 40),
+                      //     // Color.fromARGB(255, 166, 215, 255),
+                      //     // Color.fromARGB(255, 154, 210, 255),
+                      //     // Color.fromARGB(255, 122, 195, 255),
+                      //     // Color.fromARGB(255, 82, 177, 255),
+                      //   ],
+                      // ),
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //       blurRadius: 1,
+                      //       spreadRadius: 2,
+                      //       offset: Offset(0, 1))
+                      // ]
+                    ),
                     child: const Center(
                       child: Text(
                         'Shop Now',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
                     ),
                   ),

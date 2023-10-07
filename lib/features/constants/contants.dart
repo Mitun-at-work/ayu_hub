@@ -22,6 +22,15 @@ final List<String> tileHeadings = [
   "Favourites"
 ];
 
+
+
+final List<IconData> clientDetailsIcon = [
+  Icons.person,
+  
+  Icons.hourglass_full_rounded,
+  Icons.favorite,
+];
+
 final List<IconData> tileIcons = [
   Icons.trending_up,
   Icons.book,
@@ -35,6 +44,8 @@ final List<String> categoriesImage = [
   'assets/images/ayurveda.png',
   'assets/images/ayurveda.png',
 ];
+
+
 
 final List<BookModel> bookModels = [
   BookModel(
