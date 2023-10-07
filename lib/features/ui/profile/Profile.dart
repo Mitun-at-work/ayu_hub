@@ -40,7 +40,7 @@ class Profile extends StatelessWidget {
                       child: const Icon(
                         Icons.edit,
                         size: 20,
-                      )),
+                      ),),
                 ],
               ),
             ),

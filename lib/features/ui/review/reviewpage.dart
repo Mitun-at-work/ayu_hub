@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/review/aireport.dart';
 import 'package:ayu_hub/features/ui/review/bookdetail.dart';
 import 'package:ayu_hub/features/ui/review/enterreview.dart';
 import 'package:ayu_hub/features/ui/review/overview.dart';
@@ -16,79 +17,109 @@ class Reviewpage extends StatefulWidget {
 }
 
 class _ReviewpageState extends State<Reviewpage> with TickerProviderStateMixin {
+  late TabController _tabController;
+  bool showFloatingActionButton = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+    _tabController.addListener(_handleTabChange);
+  }
+
+  void _handleTabChange() {
+    // Use Future.delayed to defer the setState call until after the build is complete
+    Future.delayed(Duration.zero, () {
+      setState(() {
+        showFloatingActionButton = _tabController.index == 2;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: SafeArea(
-        child: Scaffold(
-          floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.deepPurple,
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => const EnterReview(),
-                ),
-              );
-            },
-            child: const Icon(
-              Icons.add,
-              size: 30,
-            ),
-          ),
-          body: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                BookDetails(
-                  bookModel: widget.bookModel,
-                ),
-                const SizedBox(height: 10),
-                SizedBox(
-                  width: 300,
-                  child: TabBar(
-                    tabs: const [
-                      Tab(
-                        child: Text(
-                          "Overview",
-                          style: TextStyle(fontSize: 13),
-                        ),
-                      ),
-                      Tab(
-                        child: Text(
-                          "Book Detail",
-                          style: TextStyle(fontSize: 12),
-                        ),
-                      ),
-                      Tab(
-                        child: Text(
-                          "Reivew",
-                          style: TextStyle(fontSize: 13),
-                        ),
-                      ),
-                    ],
-                    labelColor: Colors.black,
-                    indicatorColor: Colors.green,
-                    indicatorSize: TabBarIndicatorSize.label,
-                    indicatorWeight: 3,
-                    unselectedLabelColor: Colors.grey.shade600,
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              BookDetails(
+                bookModel: widget.bookModel,
+              ),
+              const SizedBox(height: 10),
+              TabBar(
+                controller: _tabController,
+                labelPadding: const EdgeInsets.all(2),
+                tabs: const [
+                  Tab(
+                    child: Text(
+                      "Overview",
+                      style: TextStyle(fontSize: 13),
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 600,
-                  child: TabBarView(
-                    children: [
-                      OverView(),
-                      BkDetail(),
-                      Review(),
-                    ],
+                  Tab(
+                    child: Text(
+                      "Book Detail",
+                      style: TextStyle(fontSize: 12),
+                    ),
                   ),
+                  Tab(
+                    child: Text(
+                      "Review (2)",
+                      style: TextStyle(fontSize: 13),
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "AI Report",
+                      style: TextStyle(fontSize: 13),
+                    ),
+                  ),
+                ],
+                labelColor: Colors.black,
+                indicatorColor: Colors.green,
+                indicatorSize: TabBarIndicatorSize.label,
+                indicatorWeight: 3,
+                unselectedLabelColor: Colors.grey.shade600,
+              ),
+              SizedBox(
+                height: 600,
+                child: TabBarView(
+                  controller: _tabController,
+                  children: const [
+                    OverView(),
+                    BkDetail(),
+                    Review(),
+                    AiReport(),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
+        floatingActionButton: showFloatingActionButton
+            ? FloatingActionButton(
+                backgroundColor: Colors.deepPurple,
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => const EnterReview(),
+                    ),
+                  );
+                },
+                child: const Icon(
+                  Icons.add,
+                  size: 30,
+                ),
+              )
+            : null,
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
   }
 }

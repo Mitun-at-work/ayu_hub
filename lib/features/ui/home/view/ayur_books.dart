@@ -1,8 +1,6 @@
-import 'package:ayu_hub/features/ui/home/view/ayurvedhaBooks.dart';
+import 'package:ayu_hub/features/ui/home/view/ayurvedhabooks.dart';
 import 'package:ayu_hub/features/ui/home/view/ayurvedhabookcover.dart';
 import 'package:ayu_hub/features/ui/shop/model/book_model.dart';
-
-
 
 import 'package:flutter/material.dart';
 
@@ -36,7 +34,7 @@ class AyurvedhaBooks extends StatelessWidget {
                 AyurvedhaBookCover(bookCoverImage: bookModel.bookCoverImage),
                 const SizedBox(width: 20),
                 AyurvedhaBooksDetail(
-                  BookName: bookModel.bookName,
+                  bookName: bookModel.bookName,
                   bookAuthorName: bookModel.bookAuthorName,
                   bookPrice: bookModel.bookPrice.toString(),
                   bookRating: bookModel.bookRating.toString(),

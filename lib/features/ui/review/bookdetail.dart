@@ -18,7 +18,7 @@ class BkDetail extends StatelessWidget {
             _details("Language", " English"),
             _details("Paperback", "228 pages"),
             _details("ISBN-10", "1803343060"),
-            _details("Country of Origin", "India")
+            _details("Country of Origin", "India"),
           ],
         ),
       ),

@@ -1,4 +1,3 @@
-
 import 'package:ayu_hub/features/ui/home/view/categoryrating.dart';
 
 import 'package:ayu_hub/features/ui/review/review_widgets/tags.dart';
@@ -8,12 +7,12 @@ import 'package:flutter/material.dart';
 class AyurvedhaBooksDetail extends StatelessWidget {
   const AyurvedhaBooksDetail(
       {super.key,
-      required this.BookName,
+      required this.bookName,
       required this.bookAuthorName,
       required this.bookPrice,
       required this.bookRating});
 
-  final String BookName;
+  final String bookName;
   final String bookAuthorName;
   final String bookPrice;
   final String bookRating;
@@ -25,7 +24,7 @@ class AyurvedhaBooksDetail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            BookName,
+            bookName,
             style: const TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w800,

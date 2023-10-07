@@ -25,77 +25,79 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const NameAndNotification(),
-          const SizedBox(
-            height: 20,
-          ),
-          CarouselSlider(
-            items: items.map(
-              (e) {
-                return const Trending();
-              },
-            ).toList(),
-            options: CarouselOptions(
-              height: 190,
-              autoPlay: true,
-              enlargeCenterPage: false,
-              enableInfiniteScroll: true,
-              onPageChanged: (index, reason) {
-                setState(
-                  () {
-                    currentindex = index;
-                  },
-                );
-              },
+          child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const NameAndNotification(),
+            const SizedBox(
+              height: 20,
             ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          Center(
-            child: AnimatedSmoothIndicator(
-              activeIndex: currentindex,
-              count: items.length,
-              effect: WormEffect(
-                dotHeight: 8,
-                dotWidth: 8,
-                spacing: 5,
-                dotColor: Colors.grey.shade200,
-                activeDotColor: Colors.black87,
-                paintStyle: PaintingStyle.fill,
+            CarouselSlider(
+              items: items.map(
+                (e) {
+                  return const Trending();
+                },
+              ).toList(),
+              options: CarouselOptions(
+                height: 190,
+                autoPlay: true,
+                enlargeCenterPage: false,
+                enableInfiniteScroll: true,
+                onPageChanged: (index, reason) {
+                  setState(
+                    () {
+                      currentindex = index;
+                    },
+                  );
+                },
               ),
             ),
-          ),
-          // Trending(),
-          const Padding(
-            padding: EdgeInsets.only(left: 15, top: 26, right: 15),
-            child: Text(
-              'Categories',
-              style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            const SizedBox(
+              height: 15,
             ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Categories(),
-          const Padding(
-            padding: EdgeInsets.only(
-              left: 15,
-              top: 20,
+            Center(
+              child: AnimatedSmoothIndicator(
+                activeIndex: currentindex,
+                count: items.length,
+                effect: WormEffect(
+                  dotHeight: 8,
+                  dotWidth: 8,
+                  spacing: 5,
+                  dotColor: Colors.grey.shade200,
+                  activeDotColor: Colors.black87,
+                  paintStyle: PaintingStyle.fill,
+                ),
+              ),
             ),
-            child: Text(
-              'Trending Post',
-              style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            // Trending(),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 26, right: 15),
+              child: Text(
+                'Categories',
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const TrendingPostBuilder(),
-        ],
+            const SizedBox(
+              height: 10,
+            ),
+            const Categories(),
+            const Padding(
+              padding: EdgeInsets.only(
+                left: 15,
+                top: 20,
+              ),
+              child: Text(
+                'Trending Post',
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const TrendingPostBuilder(),
+          ],
+        ),
       )),
     );
   }
