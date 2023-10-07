@@ -1,5 +1,6 @@
 import 'package:ayu_hub/features/ui/admin/navbar.dart';
-import 'package:ayu_hub/features/ui/sign_up_page/signup.dart';
+
+import 'package:ayu_hub/features/ui/sign_up_page/signup__.dart';
 import 'package:ayu_hub/navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -58,7 +59,7 @@ class LoginPage extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) => const SignUp()));
+                        builder: (BuildContext context) => const SignupPage()));
                   },
                   child: const Text(
                     'Sign Up ',
