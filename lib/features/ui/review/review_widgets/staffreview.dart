@@ -6,12 +6,12 @@ class StaffReview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(8.0),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
               CircleAvatar(
                 backgroundImage: AssetImage(
@@ -31,8 +31,8 @@ class StaffReview extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 10),
-          Row(
+          const SizedBox(height: 10),
+          const Row(
             children: [
               Stars(value: 5),
               SizedBox(width: 8),
@@ -45,8 +45,8 @@ class StaffReview extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 5),
-          Text(
+          const SizedBox(height: 5),
+          const Text(
             "Reviewed in India on 23 September 2023",
             style: TextStyle(
               color: Colors.black54,
@@ -54,23 +54,41 @@ class StaffReview extends StatelessWidget {
               fontSize: 15,
             ),
           ),
-          SizedBox(height: 5),
-          Text(
+          const SizedBox(height: 5),
+          const Text(
             "It was an epic read. I have to read the third book soon! Good thing i started this book when the series got over!",
             style: TextStyle(),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             children: [
-              Icon(
-                Icons.thumb_up_outlined,
+              Container(
+                alignment: Alignment.center,
+                height: 40,
+                width: 120,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(.1),
+                      spreadRadius: .1,
+                      blurRadius: 12,
+                      offset: const Offset(1, 2),
+                    ),
+                  ],
+                ),
+                child: const Text("Helpful"),
               ),
-              SizedBox(width: 10),
-              Icon(
-                Icons.thumb_down_outlined,
+              const SizedBox(width: 10),
+              const VerticalDivider(
+                width: 10,
+                thickness: 2,
+                color: Colors.black,
               ),
+              const Text("Report")
             ],
-          )
+          ),
         ],
       ),
     );
