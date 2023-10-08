@@ -48,15 +48,24 @@ class CategoryRatings extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            width: 100,
+            width: 95,
           ),
-          Text(
-            rate,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              color: Colors.black,
-            ),
+          Row(
+            children: [
+              const Icon(
+                Icons.currency_rupee_sharp,
+                size: 18,
+                color: Colors.black,
+              ),
+              Text(
+                rate,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
+            ],
           ),
         ],
       ),

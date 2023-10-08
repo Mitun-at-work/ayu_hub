@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/profile/mylibrary.dart';
 import 'package:ayu_hub/features/ui/profile/purchased_history.dart';
 
 import 'package:flutter/material.dart';
@@ -285,46 +286,52 @@ class MyLibrary extends StatelessWidget {
         left: 12,
         top: 15,
       ),
-      child: Container(
-        height: 50,
-        width: 340,
-        decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 236, 236, 236),
-          borderRadius: BorderRadius.circular(40),
-          // boxShadow: const [
-          //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
-          // ]
-        ),
-        child: const Padding(
-          padding: EdgeInsets.all(10.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  SizedBox(width: 10),
-                  Icon(Icons.book_outlined, size: 22),
-                  // Image.asset(
-                  //   'assets/images/time.png',
-                  //   height: 27,
-                  // ),
-                  SizedBox(
-                    width: 12,
-                  ),
-                  Text(
-                    'My Library',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black87),
-                  ),
-                ],
-              ),
-              Icon(
-                Icons.arrow_forward_ios_outlined,
-                size: 18,
-              )
-            ],
+      child: GestureDetector(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) => const MyLibraryPage()));
+        },
+        child: Container(
+          height: 50,
+          width: 340,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 236, 236, 236),
+            borderRadius: BorderRadius.circular(40),
+            // boxShadow: const [
+            //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
+            // ]
+          ),
+          child: const Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    SizedBox(width: 10),
+                    Icon(Icons.book_outlined, size: 22),
+                    // Image.asset(
+                    //   'assets/images/time.png',
+                    //   height: 27,
+                    // ),
+                    SizedBox(
+                      width: 12,
+                    ),
+                    Text(
+                      'My Library',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black87),
+                    ),
+                  ],
+                ),
+                Icon(
+                  Icons.arrow_forward_ios_outlined,
+                  size: 18,
+                )
+              ],
+            ),
           ),
         ),
       ),

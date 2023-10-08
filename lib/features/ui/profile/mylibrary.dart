@@ -6,8 +6,8 @@ import 'package:ayu_hub/features/ui/review/review_widgets/tags.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class PurchasedHistoryPage extends StatelessWidget {
-  const PurchasedHistoryPage({super.key});
+class MyLibraryPage extends StatelessWidget {
+  const MyLibraryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class PurchasedHistoryPage extends StatelessWidget {
                     width: 25,
                   ),
                   const Text(
-                    'Purchased History',
+                    'My Library',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -70,7 +70,7 @@ class PurchasedHistoryPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                'The Magic of Ayurveda',
+                                'The Magic of Ayurveda ',
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w800,
@@ -100,7 +100,7 @@ class PurchasedHistoryPage extends StatelessWidget {
                               const SizedBox(height: 8),
                               const CategoryRatings(
                                 value: '4.9',
-                                rate: "50",
+                                rate: "200",
                                 title: '',
                               ),
                               const SizedBox(height: 10),
@@ -186,7 +186,7 @@ class PurchasedHistoryPage extends StatelessWidget {
                             const SizedBox(height: 8),
                             const CategoryRatings(
                               value: '4.3',
-                              rate: "40",
+                              rate: "300",
                               title: '',
                             ),
                             const SizedBox(height: 10),

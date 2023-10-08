@@ -1,4 +1,5 @@
 import 'package:ayu_hub/features/constants/contants.dart';
+import 'package:ayu_hub/features/ui/profile/mylibrary.dart';
 import 'package:ayu_hub/features/ui/review/reviewpage.dart';
 import 'package:flutter/material.dart';
 
@@ -20,11 +21,7 @@ class ContinueButton extends StatelessWidget {
         ),
         onPressed: () {
           Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => Reviewpage(
-                bookModel: bookModels[0],
-              ),
-            ),
+            MaterialPageRoute(builder: (context) => const MyLibraryPage()),
           );
         },
         child: const Row(

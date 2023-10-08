@@ -54,7 +54,7 @@ class AyurvedhaBooksDetail extends StatelessWidget {
           const SizedBox(height: 8),
           CategoryRatings(
             value: bookRating,
-            rate: "\$$bookPrice",
+            rate: bookPrice,
             title: '',
           ),
           const SizedBox(height: 10),

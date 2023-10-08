@@ -17,7 +17,16 @@ class BookPriceInfo extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text("\$$bookPrice"),
+          Row(
+            children: [
+              const Icon(
+                Icons.currency_rupee_sharp,
+                size: 16,
+                color: Colors.black,
+              ),
+              Text(bookPrice.toString()),
+            ],
+          ),
           Row(
             children: [
               Text(bookRating.toString()),
