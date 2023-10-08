@@ -1,14 +1,14 @@
 import 'package:ayu_hub/features/ui/profile/purchasedhistory_Bottominfo.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/book_info.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/bookimg.dart';
-import 'package:ayu_hub/features/ui/review/review_widgets/bottominfo.dart';
+
 import 'package:ayu_hub/features/ui/review/review_widgets/reviewtopbar.dart';
 import 'package:ayu_hub/features/ui/shop/model/book_model.dart';
 import 'package:flutter/material.dart';
 
-class BookDetails extends StatelessWidget {
+class PurchasedHistoryBookDetail extends StatelessWidget {
   final BookModel bookModel;
-  const BookDetails({
+  const PurchasedHistoryBookDetail({
     super.key,
     required this.bookModel,
   });
@@ -49,7 +49,7 @@ class BookDetails extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 40),
-            BottomInfo(
+            PurchasedHistoryBottomInfo(
               rating: bookModel.bookRating,
             ),
           ],

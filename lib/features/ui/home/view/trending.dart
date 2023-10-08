@@ -57,7 +57,7 @@ class Trending extends StatelessWidget {
                     Text(
                       'Collane LV',
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 13,
                           fontWeight: FontWeight.bold,
                           color: Colors.black54),
                     ),

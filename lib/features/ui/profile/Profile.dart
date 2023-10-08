@@ -1,3 +1,5 @@
+import 'package:ayu_hub/features/ui/profile/purchased_history.dart';
+
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
@@ -31,16 +33,17 @@ class Profile extends StatelessWidget {
                 alignment: const Alignment(0.9, 1),
                 children: [
                   Container(
-                      height: 25,
-                      width: 25,
-                      decoration: BoxDecoration(
-                        color: Colors.yellow,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: const Icon(
-                        Icons.edit,
-                        size: 20,
-                      ),),
+                    height: 25,
+                    width: 25,
+                    decoration: BoxDecoration(
+                      color: Colors.yellow,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: const Icon(
+                      Icons.edit,
+                      size: 20,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -254,7 +257,7 @@ class HelpAndSupport extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black54),
+                        color: Colors.black87),
                   ),
                 ],
               ),
@@ -341,47 +344,53 @@ class PurchasedHistory extends StatelessWidget {
         left: 12,
         top: 15,
       ),
-      child: Container(
-        height: 50,
-        width: 340,
-        decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 236, 236, 236),
-          borderRadius: BorderRadius.circular(40),
-          // boxShadow: const [
-          //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
-          // ]
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Image.asset(
-                    'assets/images/time.png',
-                    height: 20,
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  const Text(
-                    'Purchased History',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black87),
-                  ),
-                ],
-              ),
-              const Icon(
-                Icons.arrow_forward_ios_outlined,
-                size: 18,
-              )
-            ],
+      child: GestureDetector(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) => const PurchasedHistoryPage()));
+        },
+        child: Container(
+          height: 50,
+          width: 340,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 236, 236, 236),
+            borderRadius: BorderRadius.circular(40),
+            // boxShadow: const [
+            //   BoxShadow(blurRadius: 2, color: Colors.grey, offset: Offset(0, 2))
+            // ]
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Image.asset(
+                      'assets/images/time.png',
+                      height: 20,
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    const Text(
+                      'Purchased History',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black87),
+                    ),
+                  ],
+                ),
+                const Icon(
+                  Icons.arrow_forward_ios_outlined,
+                  size: 18,
+                )
+              ],
+            ),
           ),
         ),
       ),

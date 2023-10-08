@@ -29,10 +29,12 @@ class ClientDetailPageTwo extends StatelessWidget {
           child: Container(
             height: 45,
             width: 320,
-            decoration: const BoxDecoration(
-              boxShadow: [BoxShadow(color: Colors.blue, blurRadius: 2)],
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(color: Colors.purple.shade900, blurRadius: 2)
+              ],
               color: Colors.white,
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(30),
               ),
             ),
@@ -72,10 +74,12 @@ class ClientDetailPageTwo extends StatelessWidget {
           child: Container(
             height: 45,
             width: 320,
-            decoration: const BoxDecoration(
-              boxShadow: [BoxShadow(color: Colors.blue, blurRadius: 2)],
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(color: Colors.purple.shade900, blurRadius: 2)
+              ],
               color: Colors.white,
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(30),
               ),
             ),
@@ -115,10 +119,12 @@ class ClientDetailPageTwo extends StatelessWidget {
           child: Container(
             height: 45,
             width: 320,
-            decoration: const BoxDecoration(
-              boxShadow: [BoxShadow(color: Colors.blue, blurRadius: 2)],
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(color: Colors.purple.shade900, blurRadius: 2)
+              ],
               color: Colors.white,
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(30),
               ),
             ),
@@ -156,10 +162,12 @@ class ClientDetailPageTwo extends StatelessWidget {
           child: Container(
             height: 45,
             width: 320,
-            decoration: const BoxDecoration(
-              boxShadow: [BoxShadow(color: Colors.blue, blurRadius: 2)],
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(color: Colors.purple.shade900, blurRadius: 2)
+              ],
               color: Colors.white,
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(30),
               ),
             ),

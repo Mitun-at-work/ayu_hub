@@ -1,11 +1,10 @@
 import 'package:ayu_hub/features/constants/contants.dart';
 import 'package:ayu_hub/features/ui/home/view/ayurvedha_books_builder.dart';
-import 'package:ayu_hub/features/ui/home/view/search_category.dart';
 import 'package:ayu_hub/features/ui/shop/title_tile.dart';
 import 'package:flutter/material.dart';
 
-class CategoryBooks extends StatelessWidget {
-  const CategoryBooks({super.key});
+class SearchCategories extends StatelessWidget {
+  const SearchCategories({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +57,7 @@ class CategoryBooks extends StatelessWidget {
                                         const SearchCategories()));
                               },
                               child: const Icon(Icons.search)),
-                          hintText: "Search Books",
+                          hintText: "Search for bookname,authorname",
                           border: InputBorder.none,
                         ),
                         maxLines: 1,
@@ -74,15 +73,6 @@ class CategoryBooks extends StatelessWidget {
                     ),
                   )
                 ],
-              ),
-              const TitleTile(
-                tileTitle: "Category",
-                tileSuffix: "More",
-              ),
-              const CategorySearch(),
-              const TitleTile(
-                tileTitle: "Ayurvedha",
-                tileSuffix: "",
               ),
               const AyurvedhaBooksBuilder(),
             ],
