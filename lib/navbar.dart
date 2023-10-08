@@ -33,7 +33,7 @@ class _NavbarState extends State<Navbar> {
             });
           },
           currentIndex: selectedindex,
-          selectedItemColor: Colors.black,
+          selectedItemColor: Colors.deepPurple.shade900,
           unselectedItemColor: Colors.black54,
           items: [
             const BottomNavigationBarItem(

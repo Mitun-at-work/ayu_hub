@@ -1,4 +1,6 @@
-import 'package:ayu_hub/features/ui/home/view/trending.dart';
+import 'package:ayu_hub/features/constants/trending/trending1.dart';
+import 'package:ayu_hub/features/constants/trending/trending2.dart';
+import 'package:ayu_hub/features/constants/trending/trending3.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -12,9 +14,9 @@ class TreendingCarousel extends StatefulWidget {
 
 class _TreendingCarouselState extends State<TreendingCarousel> {
   final myitems = [
-    const Trending(),
-    const Trending(),
-    const Trending(),
+    const Trending1(),
+    const Trending2(),
+    const Trending3(),
   ];
 
   int myCurrentIndex = 0;
@@ -24,6 +26,7 @@ class _TreendingCarouselState extends State<TreendingCarousel> {
       children: [
         CarouselSlider(
           options: CarouselOptions(
+            enlargeCenterPage: false,
             height: 200,
             enableInfiniteScroll: true,
             autoPlay: true,

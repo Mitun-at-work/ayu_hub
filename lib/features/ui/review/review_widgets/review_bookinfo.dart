@@ -1,4 +1,3 @@
-import 'package:ayu_hub/features/ui/profile/purchasedhistory_Bottominfo.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/book_info.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/bookimg.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/bottominfo.dart';

@@ -11,15 +11,21 @@ class TopBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10, left: 15, right: 20),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Text(
-            'Hi, Jessie',
+            'Hi, Alexender',
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 22,
             ),
           ),
+          const SizedBox(width: 10),
+          const Image(
+            image: AssetImage("assets/images/verify.png"),
+            height: 20,
+            width: 20,
+          ),
+          const Spacer(),
           GestureDetector(
             onTap: () {
               Navigator.of(context).push(

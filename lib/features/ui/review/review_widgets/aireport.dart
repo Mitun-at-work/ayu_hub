@@ -1,5 +1,4 @@
 import 'package:ayu_hub/features/ui/review/review_widgets/airating.dart';
-import 'package:ayu_hub/features/ui/review/review_widgets/animatedtext.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/title.dart';
 import 'package:flutter/material.dart';
 

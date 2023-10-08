@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/login_page/welcomepage.dart';
 import 'package:ayu_hub/features/ui/profile/purchased_history.dart';
 
 import 'package:flutter/material.dart';
@@ -81,7 +82,15 @@ class Profile extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const Logout(),
+            GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => const WelcomePage(),
+                    ),
+                  );
+                },
+                child: const Logout()),
           ],
         ),
       )),

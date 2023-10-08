@@ -49,7 +49,7 @@ class WelcomePage extends StatelessWidget {
                 ),
               ),
               const Text(
-                "Select your Feild",
+                "Select your Field",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w800,
