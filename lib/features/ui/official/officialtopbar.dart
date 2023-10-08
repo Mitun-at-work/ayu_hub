@@ -1,8 +1,8 @@
 import 'package:ayu_hub/features/ui/admin/creditpoints.dart';
 import 'package:flutter/material.dart';
 
-class TopBar extends StatelessWidget {
-  const TopBar({
+class OfficialTopBar extends StatelessWidget {
+  const OfficialTopBar({
     super.key,
   });
 
@@ -13,7 +13,7 @@ class TopBar extends StatelessWidget {
       child: Row(
         children: [
           const Text(
-            'Hi, Jessie',
+            'Hi, Alexander',
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 22,

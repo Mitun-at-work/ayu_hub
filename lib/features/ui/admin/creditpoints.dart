@@ -1,8 +1,7 @@
 import 'package:ayu_hub/features/constants/contants.dart';
+import 'package:ayu_hub/features/ui/admin/navbar.dart';
 import 'package:ayu_hub/features/ui/home/view/categoryrating.dart';
 import 'package:ayu_hub/features/ui/login_page/feildbutton.dart';
-import 'package:ayu_hub/features/ui/profile/profile.dart';
-import 'package:ayu_hub/features/ui/profile/purchased_history.dart';
 import 'package:ayu_hub/features/ui/profile/purchasehistory_halfpage.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/tags.dart';
 import 'package:ayu_hub/features/ui/shop/shop.dart';
@@ -22,7 +21,8 @@ class CreditiPoints extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           onPressed: () {
-            Navigator.of(context).pop();
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => const AdminNavbar()));
           },
           icon: const Icon(Icons.arrow_back),
         ),

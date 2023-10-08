@@ -1,5 +1,5 @@
-import 'package:ayu_hub/features/ui/admin/admin_home.dart';
 import 'package:ayu_hub/features/ui/admin/admin_widgets/publishtitle.dart';
+import 'package:ayu_hub/features/ui/admin/navbar.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/inputfield.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/title.dart';
 import 'package:dotted_border/dotted_border.dart';
@@ -27,7 +27,7 @@ class PublishPage extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => const AdminHome(),
+                builder: (BuildContext context) => const AdminNavbar(),
               ),
             );
           },

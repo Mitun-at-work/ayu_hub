@@ -47,7 +47,7 @@ class _ForumCommentState extends State<ForumComment> {
           ),
           ListView.builder(
             physics: const BouncingScrollPhysics(),
-            itemCount: chats.length,
+            itemCount: replies.length,
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
@@ -56,11 +56,11 @@ class _ForumCommentState extends State<ForumComment> {
                   left: 40,
                 ),
                 child: ReplyComment(
-                  selectedText: chats[index]["text"],
-                  name: chats[index]["profileName"],
-                  comments: chats[index]["comments"],
+                  selectedText: replies[index]["text"],
+                  name: replies[index]["profileName"],
+                  comments: replies[index]["comments"],
                   likes: "10",
-                  imgUrl: chats[index]["profileUrl"],
+                  imgUrl: replies[index]["profileUrl"],
                 ),
               );
             },

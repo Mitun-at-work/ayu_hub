@@ -79,12 +79,12 @@ class EnterChat extends StatelessWidget {
                   height: 60,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.yellow.shade600,
+                    color: Colors.deepPurple.shade900,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Text(
                     "Submit",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
               ),

@@ -1,5 +1,5 @@
 import 'package:ayu_hub/features/constants/contants.dart';
-import 'package:ayu_hub/features/ui/review/reviewpage.dart';
+import 'package:ayu_hub/features/ui/admin/admin_widgets/lastreadpage.dart';
 import 'package:flutter/material.dart';
 
 class ContinueButton extends StatelessWidget {
@@ -21,7 +21,7 @@ class ContinueButton extends StatelessWidget {
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => Reviewpage(
+              builder: (context) => LastReadPage(
                 bookModel: bookModels[0],
               ),
             ),
