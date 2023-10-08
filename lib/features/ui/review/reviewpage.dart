@@ -1,8 +1,8 @@
-import 'package:ayu_hub/features/ui/review/aireport.dart';
-import 'package:ayu_hub/features/ui/review/bookdetail.dart';
-import 'package:ayu_hub/features/ui/review/enterreview.dart';
-import 'package:ayu_hub/features/ui/review/overview.dart';
-import 'package:ayu_hub/features/ui/review/review.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/aireport.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/bookdetail.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/enterreview.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/overview.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/review.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/review_bookinfo.dart';
 import 'package:ayu_hub/features/ui/shop/model/book_model.dart';
 
@@ -38,9 +38,9 @@ class _ReviewpageState extends State<Reviewpage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               BookDetails(
@@ -83,7 +83,7 @@ class _ReviewpageState extends State<Reviewpage> with TickerProviderStateMixin {
                 unselectedLabelColor: Colors.grey.shade600,
               ),
               SizedBox(
-                height: 600,
+                height: 650,
                 child: TabBarView(
                   controller: _tabController,
                   children: const [
@@ -97,23 +97,23 @@ class _ReviewpageState extends State<Reviewpage> with TickerProviderStateMixin {
             ],
           ),
         ),
-        floatingActionButton: showFloatingActionButton
-            ? FloatingActionButton(
-                backgroundColor: Colors.deepPurple,
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => const EnterReview(),
-                    ),
-                  );
-                },
-                child: const Icon(
-                  Icons.add,
-                  size: 30,
-                ),
-              )
-            : null,
       ),
+      floatingActionButton: showFloatingActionButton
+          ? FloatingActionButton(
+              backgroundColor: Colors.deepPurple,
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => const EnterReview(),
+                  ),
+                );
+              },
+              child: const Icon(
+                Icons.add,
+                size: 30,
+              ),
+            )
+          : null,
     );
   }
 

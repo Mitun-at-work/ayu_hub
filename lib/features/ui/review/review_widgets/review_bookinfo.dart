@@ -50,6 +50,7 @@ class BookDetails extends StatelessWidget {
             const SizedBox(height: 40),
             BottomInfo(
               rating: bookModel.bookRating,
+              name: bookModel.bookName,
             ),
           ],
         ),

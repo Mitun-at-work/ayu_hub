@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/admin/creditpoints.dart';
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget {
@@ -19,35 +20,42 @@ class TopBar extends StatelessWidget {
               fontSize: 22,
             ),
           ),
-          Container(
-            height: 40,
-            width: 60,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(.1),
-                  spreadRadius: .1,
-                  blurRadius: 12,
-                  offset: const Offset(1, 2),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const CreditiPoints(),
                 ),
-              ],
-            ),
-            child: const Row(
-              children: [
-                Icon(
-                  Icons.stars,
-                  color: Colors.amber,
-                ),
-                SizedBox(width: 10),
-                Text(
-                  '120',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 12,
+              );
+            },
+            child: Container(
+              alignment: Alignment.center,
+              width: 80,
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Colors.black54),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image(
+                    image: AssetImage(
+                      "assets/images/coin.png",
+                    ),
+                    height: 20,
+                    width: 20,
                   ),
-                ),
-              ],
+                  SizedBox(width: 10),
+                  Text(
+                    '120',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

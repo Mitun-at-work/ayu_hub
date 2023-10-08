@@ -34,7 +34,10 @@ class LastRead extends StatelessWidget {
           const SizedBox(
             width: 20,
           ),
-          const LastReadInfo()
+          LastReadInfo(
+            bookName: bookModel.bookName,
+            authorName: bookModel.bookAuthorName,
+          )
         ],
       ),
     );
