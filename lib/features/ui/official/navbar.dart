@@ -2,6 +2,7 @@ import 'package:ayu_hub/features/ui/admin/admin_home.dart';
 import 'package:ayu_hub/features/ui/admin/publish.dart';
 import 'package:ayu_hub/features/ui/forum/forum.dart';
 import 'package:ayu_hub/features/ui/official/officialhome.dart';
+import 'package:ayu_hub/features/ui/official/post.dart';
 import 'package:ayu_hub/features/ui/profile/profile.dart';
 import 'package:ayu_hub/features/ui/shop/shop.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class _OfficialNavbarState extends State<OfficialNavbar> {
   List pages = [
     const OfficialHome(),
     const ShoppingScreen(),
-    const PublishPage(),
+    const PostPage(),
     const ForumScreen(),
     const Profile(),
   ];
