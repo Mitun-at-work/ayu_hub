@@ -1,6 +1,6 @@
 import 'package:ayu_hub/features/constants/contants.dart';
 import 'package:ayu_hub/features/ui/home/view/categoryrating.dart';
-import 'package:ayu_hub/features/ui/profile/Purchasehistory_halfpage.dart';
+import 'package:ayu_hub/features/ui/profile/purchasehistory_halfpage.dart';
 
 import 'package:ayu_hub/features/ui/review/review_widgets/tags.dart';
 import 'package:cached_network_image/cached_network_image.dart';

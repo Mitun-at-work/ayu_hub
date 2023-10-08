@@ -52,7 +52,7 @@ class Categories extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: Image.asset(
-                    'assets/images/homeopathy.png',
+                    'assets/images/siddha2.png',
                   ),
                   iconSize: 40,
                 ),
@@ -77,7 +77,7 @@ class Categories extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: Image.asset(
-                    'assets/images/ayurveda.png',
+                    'assets/images/homeopathy.png',
                   ),
                   iconSize: 40,
                 ),
@@ -102,7 +102,7 @@ class Categories extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: Image.asset(
-                    'assets/images/ayurveda.png',
+                    'assets/images/unnani2.jpg',
                   ),
                   iconSize: 40,
                 ),

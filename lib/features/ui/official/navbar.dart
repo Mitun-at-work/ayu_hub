@@ -1,5 +1,3 @@
-import 'package:ayu_hub/features/ui/admin/admin_home.dart';
-import 'package:ayu_hub/features/ui/admin/publish.dart';
 import 'package:ayu_hub/features/ui/forum/forum.dart';
 import 'package:ayu_hub/features/ui/official/officialhome.dart';
 import 'package:ayu_hub/features/ui/official/post.dart';
@@ -55,7 +53,7 @@ class _OfficialNavbarState extends State<OfficialNavbar> {
               ),
             ),
             const BottomNavigationBarItem(
-              label: 'publish',
+              label: 'Post',
               icon: Icon(
                 Icons.add_circle_outline_rounded,
                 size: 30,
@@ -76,7 +74,7 @@ class _OfficialNavbarState extends State<OfficialNavbar> {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage("assets/images/person(2).jpeg"),
+                    image: AssetImage("assets/images/person(3).jpeg"),
                     fit: BoxFit.cover,
                   ),
                 ),

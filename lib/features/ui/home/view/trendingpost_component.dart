@@ -61,7 +61,7 @@ class TrendingPost extends StatelessWidget {
                   height: 10,
                 ),
                 const Text(
-                  'Grow Your Work Business',
+                  'Learn about Ayurveda',
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,

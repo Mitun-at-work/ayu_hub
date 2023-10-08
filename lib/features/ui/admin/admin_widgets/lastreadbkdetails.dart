@@ -1,13 +1,13 @@
+import 'package:ayu_hub/features/ui/admin/admin_widgets/bottombkinfo.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/book_info.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/bookimg.dart';
-import 'package:ayu_hub/features/ui/review/review_widgets/bottominfo.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/reviewtopbar.dart';
 import 'package:ayu_hub/features/ui/shop/model/book_model.dart';
 import 'package:flutter/material.dart';
 
-class BookDetails extends StatelessWidget {
+class LastReadBookDetails extends StatelessWidget {
   final BookModel bookModel;
-  const BookDetails({
+  const LastReadBookDetails({
     super.key,
     required this.bookModel,
   });
@@ -48,7 +48,7 @@ class BookDetails extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 40),
-            BottomInfo(
+            BottombkInfo(
               rating: bookModel.bookRating,
               name: bookModel.bookName,
             ),

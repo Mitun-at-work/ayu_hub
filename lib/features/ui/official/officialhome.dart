@@ -1,8 +1,7 @@
-import 'package:ayu_hub/features/constants/contants.dart';
-import 'package:ayu_hub/features/ui/admin/admin_widgets/lastread.dart';
-import 'package:ayu_hub/features/ui/admin/admin_widgets/topbar.dart';
 import 'package:ayu_hub/features/ui/admin/admin_widgets/trendingcarousel.dart';
 import 'package:ayu_hub/features/ui/home/view/categories.dart';
+import 'package:ayu_hub/features/ui/home/view/trending_post_builder.dart';
+import 'package:ayu_hub/features/ui/official/officialtopbar.dart';
 import 'package:ayu_hub/features/ui/shop/shop_recommended.dart';
 import 'package:ayu_hub/features/ui/shop/title_tile.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +23,7 @@ class _OfficialHomeState extends State<OfficialHome> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20),
-              TopBar(),
+              OfficialTopBar(),
               SizedBox(
                 height: 20,
               ),
@@ -37,6 +36,9 @@ class _OfficialHomeState extends State<OfficialHome> {
               SizedBox(height: 10),
               Categories(),
               SizedBox(height: 10),
+              TitleTile(tileTitle: "Events", tileSuffix: ""),
+              SizedBox(height: 10),
+              TrendingPostBuilder(),
               ShoppBookCarousel(
                 title: "Recommended Books",
               ),

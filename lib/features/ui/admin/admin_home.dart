@@ -3,6 +3,7 @@ import 'package:ayu_hub/features/ui/admin/admin_widgets/lastread.dart';
 import 'package:ayu_hub/features/ui/admin/admin_widgets/topbar.dart';
 import 'package:ayu_hub/features/ui/admin/admin_widgets/trendingcarousel.dart';
 import 'package:ayu_hub/features/ui/home/view/categories.dart';
+import 'package:ayu_hub/features/ui/review/reviewpage.dart';
 import 'package:ayu_hub/features/ui/shop/shop_recommended.dart';
 import 'package:ayu_hub/features/ui/shop/title_tile.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,18 @@ class _AdminHomeState extends State<AdminHome> {
               const SizedBox(
                 height: 20,
               ),
-              const TreendingCarousel(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => Reviewpage(
+                        bookModel: bookModels[0],
+                      ),
+                    ),
+                  );
+                },
+                child: const TreendingCarousel(),
+              ),
               const SizedBox(height: 10),
               const TitleTile(
                 tileTitle: "Last read",

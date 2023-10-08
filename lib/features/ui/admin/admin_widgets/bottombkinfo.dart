@@ -1,12 +1,12 @@
 import 'package:ayu_hub/features/ui/review/review_widgets/downloaded.dart';
-import 'package:ayu_hub/features/ui/review/review_widgets/paymentpage.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/pdfviewer.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/ratings.dart';
 import 'package:flutter/material.dart';
 
-class BottomInfo extends StatelessWidget {
+class BottombkInfo extends StatelessWidget {
   final double rating;
   final String name;
-  const BottomInfo({
+  const BottombkInfo({
     super.key,
     required this.rating,
     required this.name,
@@ -25,7 +25,9 @@ class BottomInfo extends StatelessWidget {
         GestureDetector(
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (BuildContext context) => const PaymentPage()));
+                builder: (BuildContext context) => const PdfViewer(
+                      bkName: "The Magic of Ayurveda ",
+                    )));
           },
           child: Container(
             padding: const EdgeInsets.all(15),
@@ -35,28 +37,12 @@ class BottomInfo extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.lightGreen.shade500,
             ),
-            child: const Row(
-              children: [
-                Text(
-                  "Download for",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  ),
-                ),
-                Icon(
-                  Icons.currency_rupee_sharp,
-                  size: 18,
-                  color: Colors.white,
-                ),
-                Text(
-                  "200",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  ),
-                ),
-              ],
+            child: const Text(
+              "Read Now",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+              ),
             ),
           ),
         ),

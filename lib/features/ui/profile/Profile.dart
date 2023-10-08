@@ -82,7 +82,15 @@ class Profile extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const Logout(),
+            GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => const WelcomePage(),
+                    ),
+                  );
+                },
+                child: const Logout()),
           ],
         ),
       )),

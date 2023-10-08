@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 top: 20,
               ),
               child: Text(
-                'Trending Post',
+                'Events',
                 style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
               ),
             ),

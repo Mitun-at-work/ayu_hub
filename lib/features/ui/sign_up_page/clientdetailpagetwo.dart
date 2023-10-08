@@ -212,21 +212,21 @@ class ClientDetailPageTwo extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 25),
-        const Padding(
-          padding: EdgeInsets.only(left: 50),
+        Padding(
+          padding: const EdgeInsets.only(left: 50),
           child: Row(
             children: [
-              Text(
+              const Text(
                 'Already Have an Account?',
                 style: TextStyle(fontSize: 13, color: Colors.black54),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 3,
               ),
               Text(
                 'Log in',
-                style: TextStyle(
-                    fontSize: 13, color: Color.fromARGB(255, 92, 19, 141)),
+                style:
+                    TextStyle(fontSize: 13, color: Colors.deepPurple.shade900),
               ),
             ],
           ),

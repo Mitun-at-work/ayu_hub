@@ -1,23 +1,22 @@
-import 'package:ayu_hub/features/ui/profile/Purchasehistory_bookdetail.dart';
-import 'package:ayu_hub/features/ui/review/aireport.dart';
-import 'package:ayu_hub/features/ui/review/bookdetail.dart';
-import 'package:ayu_hub/features/ui/review/enterreview.dart';
-import 'package:ayu_hub/features/ui/review/overview.dart';
-import 'package:ayu_hub/features/ui/review/review.dart';
+import 'package:ayu_hub/features/ui/admin/admin_widgets/lastreadbkdetails.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/aireport.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/bookdetail.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/enterreview.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/overview.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/review.dart';
 import 'package:ayu_hub/features/ui/shop/model/book_model.dart';
 
 import 'package:flutter/material.dart';
 
-class PurchasedHistoryHalfPage extends StatefulWidget {
+class LastReadPage extends StatefulWidget {
   final BookModel bookModel;
-  const PurchasedHistoryHalfPage({super.key, required this.bookModel});
+  const LastReadPage({super.key, required this.bookModel});
 
   @override
-  State<PurchasedHistoryHalfPage> createState() =>
-      _PurchasedHistoryHalfPageState();
+  State<LastReadPage> createState() => _LastReadPageState();
 }
 
-class _PurchasedHistoryHalfPageState extends State<PurchasedHistoryHalfPage>
+class _LastReadPageState extends State<LastReadPage>
     with TickerProviderStateMixin {
   late TabController _tabController;
   bool showFloatingActionButton = false;
@@ -40,12 +39,12 @@ class _PurchasedHistoryHalfPageState extends State<PurchasedHistoryHalfPage>
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: [
-              PurchasedHistoryBookDetail(
+              LastReadBookDetails(
                 bookModel: widget.bookModel,
               ),
               const SizedBox(height: 10),
@@ -85,7 +84,7 @@ class _PurchasedHistoryHalfPageState extends State<PurchasedHistoryHalfPage>
                 unselectedLabelColor: Colors.grey.shade600,
               ),
               SizedBox(
-                height: 600,
+                height: 650,
                 child: TabBarView(
                   controller: _tabController,
                   children: const [
@@ -99,23 +98,23 @@ class _PurchasedHistoryHalfPageState extends State<PurchasedHistoryHalfPage>
             ],
           ),
         ),
-        floatingActionButton: showFloatingActionButton
-            ? FloatingActionButton(
-                backgroundColor: Colors.deepPurple,
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => const EnterReview(),
-                    ),
-                  );
-                },
-                child: const Icon(
-                  Icons.add,
-                  size: 30,
-                ),
-              )
-            : null,
       ),
+      floatingActionButton: showFloatingActionButton
+          ? FloatingActionButton(
+              backgroundColor: Colors.deepPurple,
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => const EnterReview(),
+                  ),
+                );
+              },
+              child: const Icon(
+                Icons.add,
+                size: 30,
+              ),
+            )
+          : null,
     );
   }
 
