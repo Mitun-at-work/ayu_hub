@@ -12,8 +12,12 @@ class ContinueButton extends StatelessWidget {
       width: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
+        color: Colors.deepPurple,
       ),
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.deepPurple,
+        ),
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(

@@ -2,47 +2,53 @@ import 'package:ayu_hub/features/ui/admin/admin_widgets/continuebutton.dart';
 import 'package:flutter/material.dart';
 
 class LastReadInfo extends StatelessWidget {
-  const LastReadInfo({super.key});
+  final String bookName;
+  final String authorName;
+  const LastReadInfo({
+    super.key,
+    required this.bookName,
+    required this.authorName,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Ayurveda for Beginners 2021",
-            style: TextStyle(
+            bookName,
+            style: const TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w800,
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
-            "Author By: Colone LV",
-            style: TextStyle(
+            "Author By: $authorName",
+            style: const TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w600,
               color: Colors.grey,
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "Pages readed",
             style: TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w400,
             ),
           ),
-          SizedBox(height: 5),
-          Text(
-            "49 Out of 80",
+          const SizedBox(height: 5),
+          const Text(
+            "49 Out of 159",
             style: TextStyle(
                 fontSize: 13, fontWeight: FontWeight.w600, color: Colors.grey),
           ),
-          SizedBox(height: 20),
-          ContinueButton(),
+          const SizedBox(height: 20),
+          const ContinueButton(),
         ],
       ),
     );

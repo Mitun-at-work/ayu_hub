@@ -49,7 +49,7 @@ class _TreendingCarouselState extends State<TreendingCarousel> {
             dotWidth: 8,
             spacing: 5,
             dotColor: Colors.grey.shade200,
-            activeDotColor: Colors.black87,
+            activeDotColor: Colors.deepPurple.shade900,
             paintStyle: PaintingStyle.fill,
           ),
         ),

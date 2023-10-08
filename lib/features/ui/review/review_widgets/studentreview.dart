@@ -39,7 +39,7 @@ class StudentReview extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           const Text(
-            "Reviewed in India on 23 September 2023",
+            "Reviewed in India on 08 September 2023",
             style: TextStyle(
               color: Colors.black54,
               fontWeight: FontWeight.w600,
@@ -48,7 +48,7 @@ class StudentReview extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           const Text(
-            "I would say that the first half of this book was kinda boring and slow paced but the second half was SOOO FREAKING GOODD, the twists and turns that keep you at edge that it makes up completely for the first half. And oof that angsty end. 100% recommended",
+            "The Magic of Ayurveda is informative and entertaining to read. I'm always looking for \" natural \" remedies and this book supplied me with great information. I've already purchased a second copy as a gift ! Well done, Mr.Sanjay Dixit !",
             style: TextStyle(),
           ),
           const SizedBox(height: 20),

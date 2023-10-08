@@ -12,11 +12,10 @@ class BookImage extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.red.withOpacity(.1),
         borderRadius: const BorderRadius.all(
-          Radius.circular(10),
+          Radius.circular(8),
         ),
-        image:  DecorationImage(
-          image: NetworkImage(
-              bookCoverImage),
+        image: DecorationImage(
+          image: NetworkImage(bookCoverImage),
           fit: BoxFit.cover,
         ),
       ),

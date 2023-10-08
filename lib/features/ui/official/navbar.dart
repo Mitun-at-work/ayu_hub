@@ -1,22 +1,26 @@
+import 'package:ayu_hub/features/ui/admin/admin_home.dart';
+import 'package:ayu_hub/features/ui/admin/publish.dart';
 import 'package:ayu_hub/features/ui/forum/forum.dart';
-import 'package:ayu_hub/features/ui/home/home.dart';
+import 'package:ayu_hub/features/ui/official/officialhome.dart';
+import 'package:ayu_hub/features/ui/official/post.dart';
 import 'package:ayu_hub/features/ui/profile/profile.dart';
 import 'package:ayu_hub/features/ui/shop/shop.dart';
 import 'package:flutter/material.dart';
 
-class Navbar extends StatefulWidget {
-  const Navbar({super.key});
+class OfficialNavbar extends StatefulWidget {
+  const OfficialNavbar({super.key});
 
   @override
-  State<Navbar> createState() => _NavbarState();
+  State<OfficialNavbar> createState() => _OfficialNavbarState();
 }
 
-class _NavbarState extends State<Navbar> {
+class _OfficialNavbarState extends State<OfficialNavbar> {
   int selectedindex = 0;
 
   List pages = [
-    const HomeScreen(),
+    const OfficialHome(),
     const ShoppingScreen(),
+    const PostPage(),
     const ForumScreen(),
     const Profile(),
   ];
@@ -33,7 +37,7 @@ class _NavbarState extends State<Navbar> {
             });
           },
           currentIndex: selectedindex,
-          selectedItemColor: Colors.black,
+          selectedItemColor: Colors.deepPurple.shade900,
           unselectedItemColor: Colors.black54,
           items: [
             const BottomNavigationBarItem(
@@ -51,6 +55,13 @@ class _NavbarState extends State<Navbar> {
               ),
             ),
             const BottomNavigationBarItem(
+              label: 'publish',
+              icon: Icon(
+                Icons.add_circle_outline_rounded,
+                size: 30,
+              ),
+            ),
+            const BottomNavigationBarItem(
               label: 'My Spaces',
               icon: Icon(
                 Icons.group,
@@ -65,7 +76,7 @@ class _NavbarState extends State<Navbar> {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage("assets/images/person(1).jpeg"),
+                    image: AssetImage("assets/images/person(2).jpeg"),
                     fit: BoxFit.cover,
                   ),
                 ),

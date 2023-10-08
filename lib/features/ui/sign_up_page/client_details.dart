@@ -1,4 +1,4 @@
-import 'package:ayu_hub/features/ui/sign_up_page/signupPagetwo.dart';
+import 'package:ayu_hub/features/ui/sign_up_page/signuppagetwo.dart';
 import 'package:flutter/material.dart';
 
 class ClientDetail extends StatelessWidget {

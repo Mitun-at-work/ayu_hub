@@ -1,6 +1,7 @@
 import 'package:ayu_hub/features/ui/forum/data/forumdata.dart';
 import 'package:ayu_hub/features/ui/forum/forum_widgets/carousel.dart';
 import 'package:ayu_hub/features/ui/forum/forum_widgets/chat.dart';
+import 'package:ayu_hub/features/ui/forum/forum_widgets/chatspace.dart';
 import 'package:ayu_hub/features/ui/home/view/categories.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,14 @@ class _ForumScreenState extends State<ForumScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        // backgroundColor: Colors.deepPurple,
-        onPressed: () {},
+        backgroundColor: Colors.deepPurple.shade900,
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) => const EnterChat(),
+            ),
+          );
+        },
         child: const Icon(
           Icons.add,
         ),

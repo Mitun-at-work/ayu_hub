@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/review/review_widgets/pdfviewer.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/downloaded.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/paymentpage.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/ratings.dart';
@@ -5,9 +6,10 @@ import 'package:flutter/material.dart';
 
 class BottomInfo extends StatelessWidget {
   final double rating;
+  final String name;
   const BottomInfo({
     super.key,
-    required this.rating,
+    required this.rating, required this.name,
   });
 
   @override

@@ -1,4 +1,5 @@
 import 'package:ayu_hub/features/ui/admin/admin_home.dart';
+import 'package:ayu_hub/features/ui/admin/publish.dart';
 import 'package:ayu_hub/features/ui/forum/forum.dart';
 import 'package:ayu_hub/features/ui/profile/profile.dart';
 import 'package:ayu_hub/features/ui/shop/shop.dart';
@@ -17,6 +18,7 @@ class _AdminNavbarState extends State<AdminNavbar> {
   List pages = [
     const AdminHome(),
     const ShoppingScreen(),
+    const PublishPage(),
     const ForumScreen(),
     const Profile(),
   ];
@@ -33,7 +35,7 @@ class _AdminNavbarState extends State<AdminNavbar> {
             });
           },
           currentIndex: selectedindex,
-          selectedItemColor: Colors.black,
+          selectedItemColor: Colors.deepPurple.shade900,
           unselectedItemColor: Colors.black54,
           items: [
             const BottomNavigationBarItem(
@@ -51,7 +53,14 @@ class _AdminNavbarState extends State<AdminNavbar> {
               ),
             ),
             const BottomNavigationBarItem(
-              label: 'Forum',
+              label: 'publish',
+              icon: Icon(
+                Icons.add_circle_outline_rounded,
+                size: 30,
+              ),
+            ),
+            const BottomNavigationBarItem(
+              label: 'My Spaces',
               icon: Icon(
                 Icons.group,
                 size: 25,

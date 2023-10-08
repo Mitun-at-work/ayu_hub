@@ -7,49 +7,40 @@ import 'package:ayu_hub/features/ui/shop/shop_recommended.dart';
 import 'package:ayu_hub/features/ui/shop/title_tile.dart';
 import 'package:flutter/material.dart';
 
-class AdminHome extends StatefulWidget {
-  const AdminHome({super.key});
+class OfficialHome extends StatefulWidget {
+  const OfficialHome({super.key});
 
   @override
-  State<AdminHome> createState() => _AdminHomeState();
+  State<OfficialHome> createState() => _OfficialHomeState();
 }
 
-class _AdminHomeState extends State<AdminHome> {
+class _OfficialHomeState extends State<OfficialHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 20),
-              const TopBar(),
-              const SizedBox(
+              SizedBox(height: 20),
+              TopBar(),
+              SizedBox(
                 height: 20,
               ),
-              const TreendingCarousel(),
-              const SizedBox(height: 10),
-              const TitleTile(
-                tileTitle: "Last read",
-                tileSuffix: "",
-              ),
-              const SizedBox(height: 10),
-              LastRead(
-                bookModel: bookModels[0],
-              ),
-              const SizedBox(height: 10),
-              const TitleTile(
+              TreendingCarousel(),
+              SizedBox(height: 10),
+              TitleTile(
                 tileTitle: "Categories",
                 tileSuffix: "",
               ),
-              const SizedBox(height: 10),
-              const Categories(),
-              const SizedBox(height: 10),
-              const ShoppBookCarousel(
+              SizedBox(height: 10),
+              Categories(),
+              SizedBox(height: 10),
+              ShoppBookCarousel(
                 title: "Recommended Books",
               ),
-              const ShoppBookCarousel(
+              ShoppBookCarousel(
                 title: "Popular this month",
               ),
             ],

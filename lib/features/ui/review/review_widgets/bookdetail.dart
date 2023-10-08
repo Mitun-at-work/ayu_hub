@@ -12,11 +12,11 @@ class BkDetail extends StatelessWidget {
         padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
-            _details("Book Name", "Ayurveda for Beginners 2021"),
-            _details("Author", "Colone LV"),
-            _details("Publisher", " Farshore , HarperCollins London,UK"),
+            _details("Book Name", "The Magic of Ayurveda"),
+            _details("Author", "Sanjay Dixit"),
+            _details("Publisher", " State Medical Plants board, Rajasthan"),
             _details("Language", " English"),
-            _details("Paperback", "228 pages"),
+            _details("Paperback", "154 pages"),
             _details("ISBN-10", "1803343060"),
             _details("Country of Origin", "India"),
           ],

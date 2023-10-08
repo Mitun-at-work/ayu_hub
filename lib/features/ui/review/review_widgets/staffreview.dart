@@ -56,7 +56,7 @@ class StaffReview extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           const Text(
-            "It was an epic read. I have to read the third book soon! Good thing i started this book when the series got over!",
+            "This book provides a straightforward introduction to Ayurveda, making it accessible to beginners. The author offers practical natural remedies for common ailments, making it a handy household reference. It's a commendable effort by the author.",
             style: TextStyle(),
           ),
           const SizedBox(height: 20),
