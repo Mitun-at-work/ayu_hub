@@ -8,6 +8,7 @@ class Trending3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       height: 197,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20)),

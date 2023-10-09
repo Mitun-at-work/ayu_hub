@@ -26,7 +26,7 @@ class _ChatWidgetState extends State<ChatWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -103,6 +103,8 @@ class _ChatWidgetState extends State<ChatWidget> {
               const SizedBox(width: 10),
             ],
           ),
+          const SizedBox(height: 10),
+          const Divider(thickness: 2),
         ],
       ),
     );

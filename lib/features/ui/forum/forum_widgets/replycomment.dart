@@ -27,7 +27,7 @@ class _ReplyCommentState extends State<ReplyComment> {
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 15,
-          vertical: 15,
+          vertical: 10,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,7 +86,9 @@ class _ReplyCommentState extends State<ReplyComment> {
                 ),
                 const SizedBox(width: 10),
               ],
-            )
+            ),
+            const SizedBox(height: 10),
+            const Divider(thickness: 2),
           ],
         ),
       ),

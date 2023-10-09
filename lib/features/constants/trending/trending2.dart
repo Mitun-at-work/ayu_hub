@@ -8,12 +8,13 @@ class Trending2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       height: 197,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20)),
           color: Color.fromARGB(255, 246, 246, 246)),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(5),
         child: Row(
           children: [
             Container(
@@ -37,7 +38,7 @@ class Trending2 extends StatelessWidget {
                 ),
                 const Text(
                   'Ayurved For Beginers',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
                   height: 5,

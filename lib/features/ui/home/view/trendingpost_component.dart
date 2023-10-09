@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
 
 class TrendingPost extends StatelessWidget {
+  final String eventTitle;
+  final String day;
+  final String date;
+  final String likes;
+  final String comments;
   const TrendingPost({
     super.key,
+    required this.eventTitle,
+    required this.day,
+    required this.date,
+    required this.likes,
+    required this.comments,
   });
 
   @override
@@ -33,20 +43,20 @@ class TrendingPost extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.purple.shade300,
                           borderRadius: BorderRadius.circular(50)),
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
                             Text(
-                              'Mon',
-                              style: TextStyle(
+                              day,
+                              style: const TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white),
                             ),
                             Text(
-                              '24',
-                              style: TextStyle(
+                              date,
+                              style: const TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white),
@@ -60,9 +70,9 @@ class TrendingPost extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  'Learn about Ayurveda',
-                  style: TextStyle(
+                Text(
+                  eventTitle,
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
@@ -86,9 +96,9 @@ class TrendingPost extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    const Text(
-                      '90 Likes',
-                      style: TextStyle(
+                    Text(
+                      '$likes Likes',
+                      style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
                           color: Colors.black54),
@@ -107,9 +117,9 @@ class TrendingPost extends StatelessWidget {
                     const SizedBox(
                       width: 3,
                     ),
-                    const Text(
-                      '40 comments',
-                      style: TextStyle(
+                    Text(
+                      '$comments comments',
+                      style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
                           color: Colors.black54),

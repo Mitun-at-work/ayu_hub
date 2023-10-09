@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class Trending1 extends StatelessWidget {
@@ -8,6 +9,7 @@ class Trending1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       height: 197,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -23,7 +25,7 @@ class Trending1 extends StatelessWidget {
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   image: DecorationImage(
-                      image: NetworkImage(
+                      image: CachedNetworkImageProvider(
                           'https://iiam.co.in/Uploads/books/62728a1e-5534-49b9-9b3e-44ac989bff0c/FrontImage.png'))),
             ),
             const SizedBox(
