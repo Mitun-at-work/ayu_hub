@@ -10,8 +10,16 @@ class ForumTrending extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(.1),
+              spreadRadius: .1,
+              blurRadius: 12,
+              offset: const Offset(1, 2),
+            )
+          ],
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),

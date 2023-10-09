@@ -4,8 +4,8 @@ import 'package:ayu_hub/features/ui/profile/purchased_history.dart';
 
 import 'package:flutter/material.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({super.key});
+class AdminProfile extends StatelessWidget {
+  const AdminProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class Profile extends StatelessWidget {
                 color: Colors.black,
                 borderRadius: BorderRadius.circular(60),
                 image: const DecorationImage(
-                  image: AssetImage('assets/images/person(1).jpeg'),
+                  image: AssetImage('assets/images/person(2).jpeg'),
                 ),
               ),
               child: Stack(
@@ -53,11 +53,11 @@ class Profile extends StatelessWidget {
               height: 20,
             ),
             const Text(
-              'Sudharsan',
+              'Jessie',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const Text(
-              'sudharsan@gmail.com',
+              'jessie@gmail.com',
               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
             ),
             const SizedBox(
