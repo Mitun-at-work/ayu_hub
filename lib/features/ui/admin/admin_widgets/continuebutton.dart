@@ -1,5 +1,6 @@
 import 'package:ayu_hub/features/constants/contants.dart';
 import 'package:ayu_hub/features/ui/profile/mylibrary.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/pdfviewer.dart';
 import 'package:ayu_hub/features/ui/review/reviewpage.dart';
 import 'package:flutter/material.dart';
 
@@ -20,9 +21,9 @@ class ContinueButton extends StatelessWidget {
           backgroundColor: Colors.deepPurple,
         ),
         onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const MyLibraryPage()),
-          );
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) =>
+                  const PdfViewer(bkName: 'The Magic Of Ayrvedha')));
         },
         child: const Row(
           children: [

@@ -1,12 +1,14 @@
 import 'package:ayu_hub/features/ui/profile/Purchasehistory_bookdetail.dart';
-import 'package:ayu_hub/features/ui/review/aireport.dart';
-import 'package:ayu_hub/features/ui/review/bookdetail.dart';
-import 'package:ayu_hub/features/ui/review/enterreview.dart';
-import 'package:ayu_hub/features/ui/review/overview.dart';
-import 'package:ayu_hub/features/ui/review/review.dart';
+
+import 'package:ayu_hub/features/ui/review/review_widgets/bookdetail.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/enterreview.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/overview.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/review.dart';
 import 'package:ayu_hub/features/ui/shop/model/book_model.dart';
 
 import 'package:flutter/material.dart';
+
+import '../review/review_widgets/aireport.dart';
 
 class PurchasedHistoryHalfPage extends StatefulWidget {
   final BookModel bookModel;

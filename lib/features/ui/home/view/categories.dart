@@ -1,4 +1,3 @@
-import 'package:ayu_hub/features/ui/home/view/categorybook.dart';
 import 'package:flutter/material.dart';
 
 class Categories extends StatelessWidget {
@@ -20,17 +19,7 @@ class Categories extends StatelessWidget {
             ),
             child: Column(
               children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            const CategoryBooks()));
-                  },
-                  icon: Image.asset(
-                    'assets/images/ayurveda.png',
-                  ),
-                  iconSize: 40,
-                ),
+                iconContainer('assets/images/basil.png'),
                 const Text(
                   'Ayurvedha',
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
@@ -49,13 +38,7 @@ class Categories extends StatelessWidget {
             ),
             child: Column(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Image.asset(
-                    'assets/images/siddha2.png',
-                  ),
-                  iconSize: 40,
-                ),
+                iconContainer('assets/images/homeopathy (2).png'),
                 const Text(
                   'Siddha',
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
@@ -74,13 +57,7 @@ class Categories extends StatelessWidget {
             ),
             child: Column(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Image.asset(
-                    'assets/images/homeopathy.png',
-                  ),
-                  iconSize: 40,
-                ),
+                iconContainer('assets/images/homeopathy (1).png'),
                 const Text(
                   'Homeopathy',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
@@ -99,13 +76,7 @@ class Categories extends StatelessWidget {
             ),
             child: Column(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Image.asset(
-                    'assets/images/unnani2.jpg',
-                  ),
-                  iconSize: 40,
-                ),
+                iconContainer('assets/images/mortar.png'),
                 const Text(
                   'unani',
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
@@ -117,6 +88,33 @@ class Categories extends StatelessWidget {
             width: 9,
           ),
         ],
+      ),
+    );
+  }
+
+  Container iconContainer(String iconPath) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+          // shape: BoxShape.circle,
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(100),
+          border: Border.all(color: Colors.grey),
+          boxShadow: [
+            BoxShadow(
+                blurRadius: 1.2,
+                spreadRadius: .6,
+                color: Colors.grey.shade200,
+                offset: const Offset(0, 1))
+          ]),
+      child: Center(
+        child: Image.asset(
+          height: 35,
+          width: 35,
+          fit: BoxFit.cover,
+          iconPath,
+        ),
       ),
     );
   }
