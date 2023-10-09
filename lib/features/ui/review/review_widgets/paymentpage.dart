@@ -1,5 +1,6 @@
 import 'package:ayu_hub/features/ui/review/review_widgets/payment_sucessful.dart';
 import 'package:ayu_hub/features/ui/review/review_widgets/paymentad_crasoal.dart';
+import 'package:ayu_hub/features/ui/review/review_widgets/paywish.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -47,9 +48,22 @@ class _PaymentPageState extends State<PaymentPage> {
               'Payment',
               style: TextStyle(fontSize: 15, color: Colors.black),
             ),
-            Text(
-              'Amount payable: \$50.0',
-              style: TextStyle(fontSize: 15, color: Colors.black),
+            Row(
+              children: [
+                Text(
+                  'Amount payable: ',
+                  style: TextStyle(fontSize: 15, color: Colors.black),
+                ),
+                Icon(
+                  Icons.currency_rupee_outlined,
+                  color: Colors.black,
+                  size: 15,
+                ),
+                Text(
+                  '200',
+                  style: TextStyle(fontSize: 15, color: Colors.black),
+                ),
+              ],
             ),
           ],
         ),
@@ -124,7 +138,7 @@ class _PaymentPageState extends State<PaymentPage> {
             ),
             Container(
               height: 50,
-              width: 340,
+              width: 360,
               decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -160,7 +174,7 @@ class _PaymentPageState extends State<PaymentPage> {
               height: 18,
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 30, right: 25),
+              padding: EdgeInsets.only(left: 16, right: 25),
               child: Row(
                 children: [
                   Text(
@@ -182,8 +196,8 @@ class _PaymentPageState extends State<PaymentPage> {
               height: 10,
             ),
             Container(
-              height: 50,
-              width: 330,
+              height: 60,
+              width: 355,
               decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -191,7 +205,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 14, top: 5),
+                    padding: const EdgeInsets.only(right: 14, top: 9),
                     child: Row(
                       children: [
                         const Padding(
@@ -238,7 +252,7 @@ class _PaymentPageState extends State<PaymentPage> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(right: 99, top: 20),
+              padding: EdgeInsets.only(right: 130, top: 20),
               child: Text(
                 'How would you want to pay?',
                 style: TextStyle(
@@ -250,45 +264,7 @@ class _PaymentPageState extends State<PaymentPage> {
             const SizedBox(
               height: 10,
             ),
-            Container(
-              height: 250,
-              width: 325,
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10))),
-              child: const Column(
-                children: [
-                  Card(),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Divider(
-                    color: Colors.black,
-                    height: 20,
-                    thickness: 0.5,
-                    indent: 20,
-                    endIndent: 20,
-                  ),
-                  NetBanking(),
-                  Divider(
-                    color: Colors.black,
-                    height: 20,
-                    thickness: 0.5,
-                    indent: 20,
-                    endIndent: 20,
-                  ),
-                  Wallet(),
-                  Divider(
-                    color: Colors.black,
-                    height: 20,
-                    thickness: 0.5,
-                    indent: 20,
-                    endIndent: 20,
-                  ),
-                  Rewards(),
-                ],
-              ),
-            ),
+            const PayWish(),
             const SizedBox(
               height: 20,
             ),
@@ -317,154 +293,6 @@ class _PaymentPageState extends State<PaymentPage> {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class Rewards extends StatelessWidget {
-  const Rewards({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 10, left: 20, right: 15),
-      child: Row(
-        children: [
-          Icon(
-            Icons.redeem,
-            size: 26,
-            // color: Colors.white,
-          ),
-          SizedBox(
-            width: 15,
-          ),
-          Text(
-            'Pay with Rewards',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          Spacer(),
-          Icon(
-            Icons.arrow_forward_ios,
-            size: 18,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Wallet extends StatelessWidget {
-  const Wallet({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 15, left: 20, right: 15),
-      child: Row(
-        children: [
-          Icon(
-            Icons.account_balance_wallet,
-            size: 26,
-            // color: Colors.white,
-          ),
-          SizedBox(
-            width: 15,
-          ),
-          Text(
-            'Wallet',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          Spacer(),
-          Icon(
-            Icons.arrow_forward_ios,
-            size: 18,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class NetBanking extends StatelessWidget {
-  const NetBanking({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 10, left: 20, right: 15),
-      child: Row(
-        children: [
-          Icon(
-            Icons.account_balance,
-            size: 26,
-            // color: Colors.white,
-          ),
-          SizedBox(
-            width: 15,
-          ),
-          Text(
-            'Net Banking',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          Spacer(),
-          Icon(
-            Icons.arrow_forward_ios,
-            size: 18,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Card extends StatelessWidget {
-  const Card({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 18, left: 20, right: 15),
-      child: Row(
-        children: [
-          Icon(
-            Icons.credit_card,
-            size: 26,
-            // color: Colors.white,
-          ),
-          SizedBox(
-            width: 15,
-          ),
-          Text(
-            'Credit/Debit/ATM Card',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          Spacer(),
-          Icon(
-            Icons.arrow_forward_ios,
-            size: 18,
-          ),
-        ],
       ),
     );
   }

@@ -24,12 +24,14 @@ class _PaymentAdCarosalState extends State<PaymentAdCarosal> {
             padding: EdgeInsets.only(top: 20, left: 20),
             child: Column(
               children: [
-                Icon(
-                  Icons.paid_outlined,
-                  size: 30,
+                Image(
+                  image: AssetImage(
+                      'assets/images/71-718802_download-axis-bank-logo-png-transparent-png.png'),
+                  height: 40,
+                  width: 40,
                 ),
                 Text(
-                  'Pay',
+                  'Axis',
                   style: TextStyle(fontSize: 20),
                 ),
               ],
@@ -46,7 +48,7 @@ class _PaymentAdCarosalState extends State<PaymentAdCarosal> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Get flat Rs.20 cashback on flat ever transaction with CRED pay UPI',
+                    'Get flat Rs.20 cashback on flat ever transaction with AXIS credit card',
                     style: TextStyle(fontSize: 13, color: Colors.black54),
                   ),
                   SizedBox(
