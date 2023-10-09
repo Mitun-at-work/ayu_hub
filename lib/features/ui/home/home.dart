@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/admin/admin_widgets/trendingcarousel.dart';
 import 'package:ayu_hub/features/ui/home/view/categories.dart';
 import 'package:ayu_hub/features/ui/home/view/nameand_notification.dart';
 import 'package:ayu_hub/features/ui/home/view/trending.dart';
@@ -23,66 +24,51 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentindex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const NameAndNotification(),
-            const SizedBox(
+            NameAndNotification(),
+            SizedBox(
               height: 20,
             ),
-            CarouselSlider(
-              items: items.map(
-                (e) {
-                  return const Trending();
-                },
-              ).toList(),
-              options: CarouselOptions(
-                height: 190,
-                autoPlay: true,
-                enlargeCenterPage: false,
-                enableInfiniteScroll: true,
-                onPageChanged: (index, reason) {
-                  setState(
-                    () {
-                      currentindex = index;
-                    },
-                  );
-                },
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Center(
-              child: AnimatedSmoothIndicator(
-                activeIndex: currentindex,
-                count: items.length,
-                effect: WormEffect(
-                  dotHeight: 8,
-                  dotWidth: 8,
-                  spacing: 5,
-                  dotColor: Colors.grey.shade200,
-                  activeDotColor: Colors.black87,
-                  paintStyle: PaintingStyle.fill,
-                ),
-              ),
-            ),
+            TreendingCarousel(),
+            // CarouselSlider(
+            //   items: items.map(
+            //     (e) {
+            //       return const Trending();
+            //     },
+            //   ).toList(),
+            //   options: CarouselOptions(
+            //     height: 190,
+            //     autoPlay: true,
+            //     enlargeCenterPage: false,
+            //     enableInfiniteScroll: true,
+            //     onPageChanged: (index, reason) {
+            //       setState(
+            //         () {
+            //           currentindex = index;
+            //         },
+            //       );
+            //     },
+            //   ),
+            // ),
+
             // Trending(),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 15, top: 26, right: 15),
               child: Text(
                 'Categories',
                 style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
-            const Categories(),
-            const Padding(
+            Categories(),
+            Padding(
               padding: EdgeInsets.only(
                 left: 15,
                 top: 20,
@@ -92,10 +78,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
-            const TrendingPostBuilder(),
+            TrendingPostBuilder(),
           ],
         ),
       )),

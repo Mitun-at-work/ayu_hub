@@ -36,10 +36,10 @@ final List<IconData> tileIcons = [
 ];
 
 final List<String> categoriesImage = [
-  'assets/images/ayurveda.png',
-  'assets/images/homeopathy.png',
-  'assets/images/ayurveda.png',
-  'assets/images/ayurveda.png',
+  'assets/images/basil.png',
+  'assets/images/homeopathy (2).png',
+  'assets/images/homeopathy (1).png',
+  'assets/images/mortar.png',
 ];
 
 final List<BookModel> bookModels = [
