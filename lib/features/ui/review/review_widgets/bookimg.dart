@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class BookImage extends StatelessWidget {
@@ -15,7 +16,7 @@ class BookImage extends StatelessWidget {
           Radius.circular(8),
         ),
         image: DecorationImage(
-          image: NetworkImage(bookCoverImage),
+          image: CachedNetworkImageProvider(bookCoverImage),
           fit: BoxFit.cover,
         ),
       ),

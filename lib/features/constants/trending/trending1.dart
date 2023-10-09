@@ -1,5 +1,6 @@
 import 'package:ayu_hub/features/constants/contants.dart';
 import 'package:ayu_hub/features/ui/review/reviewpage.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class Trending1 extends StatelessWidget {
@@ -94,6 +95,94 @@ class Trending1 extends StatelessWidget {
                         ),
                       ));
                     },
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+        height: 197,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
+          color: const Color.fromARGB(227, 246, 246, 246),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(.1),
+              spreadRadius: .1,
+              blurRadius: 12,
+              offset: const Offset(1, 2),
+            )
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Container(
+                height: 150,
+                width: 120,
+                // color: Colors.yellow,
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    image: DecorationImage(
+                        image: CachedNetworkImageProvider(
+                            'https://iiam.co.in/Uploads/books/62728a1e-5534-49b9-9b3e-44ac989bff0c/FrontImage.png'))),
+              ),
+              const SizedBox(
+                width: 4,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 28,
+                  ),
+                  const Text(
+                    'Magic of Ayurveda',
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Row(
+                    children: [
+                      Text(
+                        'Author:',
+                        style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black38),
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Text(
+                        'Sanjay Dixit',
+                        style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black54),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 6,
+                  ),
+                  const Row(
+                    children: [
+                      Text(
+                        '4.9',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Icon(
+                        Icons.star,
+                        color: Colors.amber,
+                        size: 19,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, top: 8),
                     child: Container(
                       height: 30,
                       width: 100,
@@ -132,15 +221,15 @@ class Trending1 extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
+        // decoration: const BoxDecoration(
+        //     color: Colors.redAccent,
+        //     borderRadius: BorderRadius.all(Radius.circular(20))),
       ),
-      // decoration: const BoxDecoration(
-      //     color: Colors.redAccent,
-      //     borderRadius: BorderRadius.all(Radius.circular(20))),
     );
   }
 }

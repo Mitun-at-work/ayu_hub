@@ -1,12 +1,8 @@
 import 'package:ayu_hub/features/ui/admin/admin_widgets/trendingcarousel.dart';
 import 'package:ayu_hub/features/ui/home/view/categories.dart';
 import 'package:ayu_hub/features/ui/home/view/nameand_notification.dart';
-import 'package:ayu_hub/features/ui/home/view/trending.dart';
 import 'package:ayu_hub/features/ui/home/view/trending_post_builder.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,12 +12,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final items = [
-    const Trending(),
-    const Trending(),
-    const Trending(),
-  ];
-  int currentindex = 0;
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

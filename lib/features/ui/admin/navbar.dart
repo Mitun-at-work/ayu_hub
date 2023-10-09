@@ -1,4 +1,5 @@
 import 'package:ayu_hub/features/ui/admin/admin_home.dart';
+import 'package:ayu_hub/features/ui/admin/adminprofiles.dart';
 import 'package:ayu_hub/features/ui/admin/publish.dart';
 import 'package:ayu_hub/features/ui/forum/forum.dart';
 import 'package:ayu_hub/features/ui/profile/profile.dart';
@@ -20,7 +21,7 @@ class _AdminNavbarState extends State<AdminNavbar> {
     const ShoppingScreen(),
     const PublishPage(),
     const ForumScreen(),
-    const Profile(),
+    const AdminProfile(),
   ];
   @override
   Widget build(BuildContext context) {
