@@ -1,3 +1,4 @@
+import 'package:ayu_hub/features/ui/home/view/categorybook.dart';
 import 'package:flutter/material.dart';
 
 class Categories extends StatelessWidget {
@@ -11,20 +12,24 @@ class Categories extends StatelessWidget {
       padding: const EdgeInsets.only(left: 15),
       child: Row(
         children: [
-          Container(
-            height: 100,
-            width: 85,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-            ),
-            child: Column(
-              children: [
-                iconContainer('assets/images/basil.png'),
-                const Text(
-                  'Ayurvedha',
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                )
-              ],
+          GestureDetector(onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>const CategoryBooks()));
+          },
+            child: Container(
+              height: 100,
+              width: 85,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              child: Column(
+                children: [
+                  iconContainer('assets/images/basil.png'),
+                  const Text(
+                    'Ayurvedha',
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
             ),
           ),
           const SizedBox(
